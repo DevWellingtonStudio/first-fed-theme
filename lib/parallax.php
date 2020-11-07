@@ -12,7 +12,6 @@ function add_parallax_frontpage_top() {
 	$alt              = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
 	$parallax_title   = get_post_meta( get_the_ID(), 'parallax-title', true );
 	$parallax_content = get_post_meta( get_the_ID(), 'parallax-content', true );
-
 	$featured_row     = get_post_meta(get_the_ID(), 'featured-row', true );
 	$side_by_side_lt    = get_post_meta(get_the_ID(), 'side-by-side-lt', true );
 	$side_by_side_rt    = get_post_meta(get_the_ID(), 'side-by-side-rt', true );
@@ -39,23 +38,23 @@ function add_parallax_frontpage_top() {
 	}
 
 	echo '<div id="fp-grid" class="container-fluid grid-section">
-				<div class="row">
-				<div class="card">
-				  <div class="card-body">
-				    '. $featured_row .'
+				  <div class="row">
+					  <div class="card">
+					  <div class="card-body">
+					  '. $featured_row .'
+					  </div>
+				    </div>
 				  </div>
-				</div>
-				</div>
-				</div>';
+			  </div>';
 
 	echo '<div id="fp-side-by-side" class="container-fluid side-by-side">
-				<div class="row">
-				<div class="col-md-6 feature">
-				'.  $side_by_side_lt .'
-				</div>
-				<div class="col-md-6 feature">
-				'.  $side_by_side_rt .'
-				</div>
-				</div>
-				</div>';
+				  <div class="row">
+					  <div class="col-md-6 feature">
+					  '.  $side_by_side_lt .'
+					  </div>
+					  <div class="col-md-6 feature">
+					  '.  $side_by_side_rt .'
+					  </div>
+				  </div>
+		  	</div>';
 }
