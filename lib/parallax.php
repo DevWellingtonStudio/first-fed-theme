@@ -14,6 +14,8 @@ function add_parallax_frontpage_top() {
 	$parallax_content = get_post_meta( get_the_ID(), 'parallax-content', true );
 
 	$featured_row     = get_post_meta(get_the_ID(), 'featured-row', true );
+	$side_by_side_lt    = get_post_meta(get_the_ID(), 'side-by-side-lt', true );
+	$side_by_side_rt    = get_post_meta(get_the_ID(), 'side-by-side-rt', true );
 
 	if ( has_post_thumbnail() ) {
 
@@ -49,10 +51,10 @@ function add_parallax_frontpage_top() {
 	echo '<div id="fp-side-by-side" class="container-fluid side-by-side">
 				<div class="row">
 				<div class="col-md-6 feature">
-
+				'.  $side_by_side_lt .'
 				</div>
 				<div class="col-md-6 feature">
-
+				'.  $side_by_side_rt .'
 				</div>
 				</div>
 				</div>';
