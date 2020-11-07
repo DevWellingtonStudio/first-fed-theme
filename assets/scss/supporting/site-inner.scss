@@ -1,0 +1,54 @@
+/* Site Inner
+----------------------------------------------------------------------------- */
+.logged-in.admin-bar {
+  .site-container {
+	.site-header {
+	  .nav-primary {
+		margin-top: 32px;
+	  }
+	}
+  }
+}
+.site-inner {
+    padding: $spacer*4 0;
+    .content {
+        margin-bottom: $spacer;
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.single, .page {
+  .site-container {
+	.site-inner {
+	  .wrap.container-fluid {
+		.content-sidebar-wrap.row {
+		  .content {
+			article.type-post {
+			  width: 70%;
+			  max-width: 2000px;
+			  margin: 0 auto;
+			}
+			article.type-page {
+			  width: 70%;
+			  max-width: 2000px;
+			  margin: 0 auto;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+
+.entry-comments {
+  width: 70%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+#respond {
+  width: 70%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
