@@ -15,11 +15,11 @@
 add_filter( 'the_content', 'bfg_image_responsive_class' );
 function bfg_image_responsive_class( $content ) {
    global $post;
-   
+
    $pattern ="/<img(.*?)class=\"(.*?)\"(.*?)>/i";
    $replacement = '<img$1class="$2 img-fluid"$3>';
    $content = preg_replace( $pattern, $replacement, $content );
-   
+
    return $content;
 }
 
@@ -120,3 +120,10 @@ add_filter( 'get_custom_logo', function( $html ) {
 
     return $html;
 }, 10 );
+
+add_action( 'genesis_before', 'centric_post_title' );
+function centric_post_title() {
+	if ( is_front_page() and !is_page_template() ) {
+		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+	}
+}
