@@ -42,11 +42,11 @@ function plax_meta_callback( $post ) {
 				<textarea style="width: 100%;" rows="4" name="featured-row" id="featured-row"><?php if ( isset ( $parallax_meta['featured-row'] ) ) echo $parallax_meta['featured-row'][0]; ?></textarea>
 			</div>
 			<div class="col-md-6">
-				<strong><label for="side-by-side-lt" class="sbm-row-content"><?php _e( 'Featured Row', 'firstfed-for-genesis' )?></label></strong>
+				<strong><label for="side-by-side-lt" class="sbm-row-content"><?php _e( 'Featured Left', 'firstfed-for-genesis' )?></label></strong>
 				<textarea style="width: 100%;" rows="4" name="side-by-side-lt" id="side-by-side-lt"><?php if ( isset ( $parallax_meta['side-by-side-lt'] ) ) echo $parallax_meta['side-by-side-lt'][0]; ?></textarea>
 			</div>
 			<div class="col-md-6">
-				<strong><label for="side-by-side-rt" class="sbm-row-content"><?php _e( 'Featured Row', 'firstfed-for-genesis' )?></label></strong>
+				<strong><label for="side-by-side-rt" class="sbm-row-content"><?php _e( 'Featured Right', 'firstfed-for-genesis' )?></label></strong>
 				<textarea style="width: 100%;" rows="4" name="side-by-side-rt" id="side-by-side-rt"><?php if ( isset ( $parallax_meta['side-by-side-rt'] ) ) echo $parallax_meta['side-by-side-rt'][0]; ?></textarea>
 			</div>
 
