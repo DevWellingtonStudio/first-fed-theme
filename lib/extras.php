@@ -121,9 +121,10 @@ add_filter( 'get_custom_logo', function( $html ) {
     return $html;
 }, 10 );
 
-add_action( 'genesis_before', 'centric_post_title' );
+add_action( 'genesis_before_entry', 'centric_post_title', 10 );
 function centric_post_title() {
-	if ( is_front_page() and !is_page_template() ) {
+	if ( is_front_page() || is_home() ) {
 		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 	}
 }
+
