@@ -16,7 +16,7 @@ function add_parallax_frontpage_top() {
 	$side_by_side_lt    = get_post_meta(get_the_ID(), 'side-by-side-lt', true );
 	$side_by_side_rt    = get_post_meta(get_the_ID(), 'side-by-side-rt', true );
 
-	if ( has_post_thumbnail() ) {
+	if ( has_post_thumbnail() && is_home() || has_post_thumbnail() && is_front_page() ) {
 
 		echo '<div class="container-fluid parallax-cont">
 						<div class="parallax-window">

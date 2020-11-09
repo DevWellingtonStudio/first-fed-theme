@@ -29,7 +29,9 @@ function add_body_grid() {
 
 	$grid_content = get_post_meta( get_the_ID(), 'grid-content', true );
 
-	echo '
+	if(is_front_page() && !is_home() ) {
+
+		echo '
 				<div id="grid-body">
 					<div class="container-fluid">
 						<div class="row">
@@ -39,22 +41,22 @@ function add_body_grid() {
 							<div class="container">
 							<div class="row top-row justify-content-center">
 							<div class="col-md-3 feature">
-							<img src="'. $body_grid_img_one .'" class="img-fluid" alt="'. $alt1 .'"/>
-							<h4>'. $gridimg_one_title .'</h4>
+							<img src="' . $body_grid_img_one . '" class="img-fluid" alt="' . $alt1 . '"/>
+							<h4>' . $gridimg_one_title . '</h4>
 							</div>
 							<div class="col-md-3 feature">
-							<img src="'. $body_grid_img_two .'" class="img-fluid" alt="'. $alt2 .'"/>
-							<h4>'. $gridimg_two_title .'</h4>
+							<img src="' . $body_grid_img_two . '" class="img-fluid" alt="' . $alt2 . '"/>
+							<h4>' . $gridimg_two_title . '</h4>
 							</div>
 							</div>
 							<div class="row bottom-row justify-content-center">
 							<div class="col-md-3 feature">
-							<img src="'. $body_grid_img_three .'" class="img-fluid" alt="'. $alt3 .'"/>
-							<h4>'. $gridimg_three_title .'</h4>
+							<img src="' . $body_grid_img_three . '" class="img-fluid" alt="' . $alt3 . '"/>
+							<h4>' . $gridimg_three_title . '</h4>
 							</div>
 							<div class="col-md-3 feature">
-							<img src="'. $body_grid_img_four .'" class="img-fluid" alt="'. $alt4 .'"/>
-							<h4>'. $gridimg_four_title .'</h4>
+							<img src="' . $body_grid_img_four . '" class="img-fluid" alt="' . $alt4 . '"/>
+							<h4>' . $gridimg_four_title . '</h4>
 							</div>
 							</div>
 							</div>
@@ -64,11 +66,12 @@ function add_body_grid() {
 				<div id="body-grid-cta" class="container">
 				<div class="card">
 						<div class="card-body">
-							'. $grid_content .'
+							' . $grid_content . '
 						</div>
 					</div>
 				</div>
 	';
+	}
 }
 
 
