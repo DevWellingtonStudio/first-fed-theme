@@ -27,6 +27,8 @@ function add_body_grid() {
 	$alt4 = get_post_meta( $get_imagefour_id, '_wp_attachment_image_alt', true );
 	$gridimg_four_title  = get_post_meta( get_the_ID(), 'gridimg-four-title', true );
 
+	$grid_content = get_post_meta( get_the_ID(), 'grid-content', true );
+
 	echo '
 				<div id="grid-body">
 					<div class="container-fluid">
@@ -56,6 +58,13 @@ function add_body_grid() {
 							</div>
 							</div>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div id="body-grid-cta" class="container">
+				<div class="card">
+						<div class="card-body">
+							'. $grid_content .'
 						</div>
 					</div>
 				</div>

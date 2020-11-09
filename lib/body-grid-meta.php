@@ -60,7 +60,10 @@ $body_grid_meta  = get_post_meta( $post->ID );
 				<input type="text" name="gridimg-four-title" id="gridimg-four-title" value="<?php if (isset($body_grid_meta['gridimg-four-title'])) echo $body_grid_meta['gridimg-four-title'][0]; ?>" />
 			  </div>
 			</div>
-		</div>
+		  <div style="width:100%; max-width: 100%;" class="card">
+			<strong><label for="grid-content" class="grid-content"><?php _e( 'Grid CTA Content', 'firstfed-for-genesis' )?></label></strong>
+			<textarea style="width: 100%;" rows="6" name="grid-content" id="grid-content"><?php if ( isset ( $body_grid_meta['grid-content'] ) ) echo $body_grid_meta['grid-content'][0]; ?></textarea>
+		  </div>
 	</div>
 
 <?php }
@@ -103,6 +106,9 @@ function body_grid_meta_save($post_id) {
 	}
 	if( isset( $_POST[ 'gridimg-four-title' ] ) ) {
 	  update_post_meta( $post_id, 'gridimg-four-title', $_POST[ 'gridimg-four-title' ] );
+	}
+	if( isset( $_POST[ 'grid-content' ] ) ) {
+	  update_post_meta( $post_id, 'grid-content', $_POST[ 'grid-content' ] );
 	}
 }
 
