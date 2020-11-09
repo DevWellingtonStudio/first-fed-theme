@@ -81,25 +81,25 @@ function body_grid_meta_save($post_id) {
 
 	// Checks for input and sanitizes/saves if needed
 	if( isset( $_POST[ 'body-grid-img-one' ] ) ) {
-		update_post_meta( $post_id, 'body-grid-img-one', $_POST[ 'body-grid-img-one' ] );
+	  update_post_meta( $post_id, 'body-grid-img-one', $_POST[ 'body-grid-img-one' ] );
 	}
 	if( isset( $_POST[ 'gridimg-one-title' ] ) ) {
 	  update_post_meta( $post_id, 'gridimg-one-title', $_POST[ 'gridimg-one-title' ] );
 	}
 	if( isset( $_POST[ 'body-grid-img-two' ] ) ) {
-		update_post_meta( $post_id, 'body-grid-img-two', $_POST[ 'body-grid-img-two' ] );
+	  update_post_meta( $post_id, 'body-grid-img-two', $_POST[ 'body-grid-img-two' ] );
 	}
 	if( isset( $_POST[ 'gridimg-two-title' ] ) ) {
 	  update_post_meta( $post_id, 'gridimg-two-title', $_POST[ 'gridimg-two-title' ] );
 	}
 	if( isset( $_POST[ 'body-grid-img-three' ] ) ) {
-		update_post_meta( $post_id, 'body-grid-img-three', $_POST[ 'body-grid-img-three' ] );
+	  update_post_meta( $post_id, 'body-grid-img-three', $_POST[ 'body-grid-img-three' ] );
 	}
 	if( isset( $_POST[ 'gridimg-three-title' ] ) ) {
 	  update_post_meta( $post_id, 'gridimg-three-title', $_POST[ 'gridimg-three-title' ] );
 	}
 	if( isset( $_POST[ 'body-grid-img-four' ] ) ) {
-		update_post_meta( $post_id, 'body-grid-img-four', $_POST[ 'body-grid-img-four' ] );
+	  update_post_meta( $post_id, 'body-grid-img-four', $_POST[ 'body-grid-img-four' ] );
 	}
 	if( isset( $_POST[ 'gridimg-four-title' ] ) ) {
 	  update_post_meta( $post_id, 'gridimg-four-title', $_POST[ 'gridimg-four-title' ] );
