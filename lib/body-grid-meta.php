@@ -25,24 +25,40 @@ $body_grid_meta  = get_post_meta( $post->ID );
 		<h3>Body Grid</h3>
 		<div class="row">
 			<div class="col-md-6">
-				<label for="body-grid-img-one" class="body-grid-img-one"><?php _e( '<b>Image Top Left</b>', 'firstfed-for-genesis' );?></label><br>
-				<input type="text" name="body-grid-img-one" id="body-grid-img-one" value="<?php if ( isset ( $body_grid_meta['body-grid-img-one'] ) ) echo $body_grid_meta['body-grid-img-one'][0];?>" />
-				<input type="button" id="body-grid-img-one-button" class="button body-grid-img-one" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			  <label for="body-grid-img-one" class="body-grid-img-one"><?php _e( '<b>Image Top Left</b>', 'firstfed-for-genesis' );?></label><br>
+			  <input type="text" name="body-grid-img-one" id="body-grid-img-one" value="<?php if ( isset ( $body_grid_meta['body-grid-img-one'] ) ) echo $body_grid_meta['body-grid-img-one'][0];?>" />
+			  <input type="button" id="body-grid-img-one-button" class="button body-grid-img-one" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			<div class="col-12">
+			  <strong><label for="gridimg-one-title" class="gridimg-one-title"><?php _e('Image One Title','firstfed-for-genesis')?></label></strong>
+			  <input type="text" name="gridimg-one-title" id="gridimg-one-title" value="<?php if (isset($body_grid_meta['gridimg-one-title'])) echo $body_grid_meta['gridimg-one-title'][0]; ?>" />
+			</div>
 			</div>
 			<div class="col-md-6">
-				<label for="body-grid-img-two" class="body-grid-img-two"><?php _e( '<b>Image Top Right</b>', 'firstfed-for-genesis' );?></label><br>
-				<input type="text" name="body-grid-img-two" id="body-grid-img-two" value="<?php if ( isset ( $body_grid_meta['body-grid-img-two'] ) ) echo $body_grid_meta['body-grid-img-two'][0];?>" />
-				<input type="button" id="body-grid-img-two-button" class="button body-grid-img-two" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			  <label for="body-grid-img-two" class="body-grid-img-two"><?php _e( '<b>Image Top Right</b>', 'firstfed-for-genesis' );?></label><br>
+			  <input type="text" name="body-grid-img-two" id="body-grid-img-two" value="<?php if ( isset ( $body_grid_meta['body-grid-img-two'] ) ) echo $body_grid_meta['body-grid-img-two'][0];?>" />
+			  <input type="button" id="body-grid-img-two-button" class="button body-grid-img-two" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			<div class="col-12">
+			  <strong><label for="gridimg-two-title" class="gridimg-two-title"><?php _e('Image Two Title','firstfed-for-genesis')?></label></strong>
+			  <input type="text" name="gridimg-two-title" id="gridimg-two-title" value="<?php if (isset($body_grid_meta['gridimg-two-title'])) echo $body_grid_meta['gridimg-two-title'][0]; ?>" />
+			</div>
 			</div>
 			<div class="col-md-6">
 				<label for="body-grid-img-three" class="body-grid-img-three"><?php _e( '<b>Image Bottom Left</b>', 'firstfed-for-genesis' );?></label><br>
 				<input type="text" name="body-grid-img-three" id="body-grid-img-three" value="<?php if ( isset ( $body_grid_meta['body-grid-img-three'] ) ) echo $body_grid_meta['body-grid-img-three'][0];?>" />
 				<input type="button" id="body-grid-img-three-button" class="button body-grid-img-three" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			  <div class="col-12">
+				<strong><label for="gridimg-three-title" class="gridimg-three-title"><?php _e('Image Three Title','firstfed-for-genesis')?></label></strong>
+				<input type="text" name="gridimg-three-title" id="gridimg-three-title" value="<?php if (isset($body_grid_meta['gridimg-three-title'])) echo $body_grid_meta['gridimg-three-title'][0]; ?>" />
+			  </div>
 			</div>
 			<div class="col-md-6">
 				<label for="body-grid-img-four" class="body-grid-img-four"><?php _e( '<b>Image Bottom Right</b>', 'firstfed-for-genesis' );?></label><br>
 				<input type="text" name="body-grid-img-four" id="body-grid-img-four" value="<?php if ( isset ( $body_grid_meta['body-grid-img-four'] ) ) echo $body_grid_meta['body-grid-img-four'][0];?>" />
 				<input type="button" id="body-grid-img-four-button" class="button body-grid-img-four" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			  <div class="col-12">
+				<strong><label for="gridimg-four-title" class="gridimg-four-title"><?php _e('Image Four Title','firstfed-for-genesis')?></label></strong>
+				<input type="text" name="gridimg-four-title" id="gridimg-four-title" value="<?php if (isset($body_grid_meta['gridimg-four-title'])) echo $body_grid_meta['gridimg-four-title'][0]; ?>" />
+			  </div>
 			</div>
 		</div>
 	</div>
@@ -67,14 +83,26 @@ function body_grid_meta_save($post_id) {
 	if( isset( $_POST[ 'body-grid-img-one' ] ) ) {
 		update_post_meta( $post_id, 'body-grid-img-one', $_POST[ 'body-grid-img-one' ] );
 	}
+	if( isset( $_POST[ 'gridimg-one-title' ] ) ) {
+	  update_post_meta( $post_id, 'gridimg-one-title', $_POST[ 'gridimg-one-title' ] );
+	}
 	if( isset( $_POST[ 'body-grid-img-two' ] ) ) {
 		update_post_meta( $post_id, 'body-grid-img-two', $_POST[ 'body-grid-img-two' ] );
+	}
+	if( isset( $_POST[ 'gridimg-two-title' ] ) ) {
+	  update_post_meta( $post_id, 'gridimg-two-title', $_POST[ 'gridimg-two-title' ] );
 	}
 	if( isset( $_POST[ 'body-grid-img-three' ] ) ) {
 		update_post_meta( $post_id, 'body-grid-img-three', $_POST[ 'body-grid-img-three' ] );
 	}
+	if( isset( $_POST[ 'gridimg-three-title' ] ) ) {
+	  update_post_meta( $post_id, 'gridimg-three-title', $_POST[ 'gridimg-three-title' ] );
+	}
 	if( isset( $_POST[ 'body-grid-img-four' ] ) ) {
 		update_post_meta( $post_id, 'body-grid-img-four', $_POST[ 'body-grid-img-four' ] );
+	}
+	if( isset( $_POST[ 'gridimg-four-title' ] ) ) {
+	  update_post_meta( $post_id, 'gridimg-four-title', $_POST[ 'gridimg-four-title' ] );
 	}
 }
 

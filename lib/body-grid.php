@@ -10,21 +10,22 @@ function add_body_grid() {
 	$body_grid_img_one = get_post_meta( get_the_ID(), 'body-grid-img-one', true );
 	$get_imageone_id = attachment_url_to_postid( $body_grid_img_one );
 	$alt1 = get_post_meta( $get_imageone_id, '_wp_attachment_image_alt', true );
+	$gridimg_one_title  = get_post_meta( get_the_ID(), 'gridimg-one-title', true );
 
 	$body_grid_img_two = get_post_meta( get_the_ID(), 'body-grid-img-two', true );
 	$get_imagetwo_id = attachment_url_to_postid( $body_grid_img_two );
 	$alt2 = get_post_meta( $get_imagetwo_id, '_wp_attachment_image_alt', true );
+	$gridimg_two_title  = get_post_meta( get_the_ID(), 'gridimg-two-title', true );
 
 	$body_grid_img_three = get_post_meta( get_the_ID(), 'body-grid-img-three', true );
 	$get_imagethree_id = attachment_url_to_postid( $body_grid_img_three );
 	$alt3 = get_post_meta( $get_imagethree_id, '_wp_attachment_image_alt', true );
+	$gridimg_three_title  = get_post_meta( get_the_ID(), 'gridimg-three-title', true );
 
 	$body_grid_img_four = get_post_meta( get_the_ID(), 'body-grid-img-four', true );
 	$get_imagefour_id = attachment_url_to_postid( $body_grid_img_four );
 	$alt4 = get_post_meta( $get_imagefour_id, '_wp_attachment_image_alt', true );
-
-
-
+	$gridimg_four_title  = get_post_meta( get_the_ID(), 'gridimg-four-title', true );
 
 	echo '
 				<div id="grid-body">
@@ -34,20 +35,24 @@ function add_body_grid() {
 							<h3>Grid Body</h3>
 							</div>
 							<div class="container">
-							<div class="row justify-content-center">
-							<div class="col-md-3">
+							<div class="row top-row justify-content-center">
+							<div class="col-md-3 feature">
 							<img src="'. $body_grid_img_one .'" class="img-fluid" alt="'. $alt1 .'"/>
+							<h4>'. $gridimg_one_title .'</h4>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 feature">
 							<img src="'. $body_grid_img_two .'" class="img-fluid" alt="'. $alt2 .'"/>
+							<h4>'. $gridimg_two_title .'</h4>
 							</div>
 							</div>
-							<div class="row justify-content-center">
-							<div class="col-md-3">
+							<div class="row bottom-row justify-content-center">
+							<div class="col-md-3 feature">
 							<img src="'. $body_grid_img_three .'" class="img-fluid" alt="'. $alt3 .'"/>
+							<h4>'. $gridimg_three_title .'</h4>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 feature">
 							<img src="'. $body_grid_img_four .'" class="img-fluid" alt="'. $alt4 .'"/>
+							<h4>'. $gridimg_four_title .'</h4>
 							</div>
 							</div>
 							</div>
