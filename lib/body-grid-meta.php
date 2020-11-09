@@ -21,8 +21,11 @@ function bgrid_meta_callback( $post ) {
 wp_nonce_field( basename( __FILE__ ), 'bgrid_nonce' );
 $body_grid_meta  = get_post_meta( $post->ID );
 ?>
+  <div style="margin-top: 1.618em;">
+	<h3>Body Grid</h3>
+  </div>
+
 	<div class="container">
-		<h3>Body Grid</h3>
 		<div class="row">
 			<div class="col-md-6">
 			  <label for="body-grid-img-one" class="body-grid-img-one"><?php _e( '<b>Image Top Left</b>', 'firstfed-for-genesis' );?></label><br>
@@ -60,10 +63,11 @@ $body_grid_meta  = get_post_meta( $post->ID );
 				<input type="text" name="gridimg-four-title" id="gridimg-four-title" value="<?php if (isset($body_grid_meta['gridimg-four-title'])) echo $body_grid_meta['gridimg-four-title'][0]; ?>" />
 			  </div>
 			</div>
-		  <div style="width:100%; max-width: 100%;" class="card">
-			<strong><label for="grid-content" class="grid-content"><?php _e( 'Grid CTA Content', 'firstfed-for-genesis' )?></label></strong>
-			<textarea style="width: 100%;" rows="6" name="grid-content" id="grid-content"><?php if ( isset ( $body_grid_meta['grid-content'] ) ) echo $body_grid_meta['grid-content'][0]; ?></textarea>
-		  </div>
+			<div style="width:100%; max-width: 100%;" class="card">
+			  <strong><label for="grid-content" class="grid-content"><?php _e( 'Grid CTA Content', 'firstfed-for-genesis' )?></label></strong>
+			  <textarea style="width: 100%;" rows="6" name="grid-content" id="grid-content"><?php if ( isset ( $body_grid_meta['grid-content'] ) ) echo $body_grid_meta['grid-content'][0]; ?></textarea>
+			</div>
+		</div>
 	</div>
 
 <?php }
