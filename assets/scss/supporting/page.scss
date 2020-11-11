@@ -1,0 +1,36 @@
+/** SCSS Page Related
+============================== */
+#page-body-features.container-fluid {
+
+}
+
+#page-body-features {
+  .top.row {
+	.feature:nth-child(1) {
+	  padding: 0;
+	}
+	.feature:nth-child(2) {
+	  background-color: $Green;
+	}
+  }
+  .middle.row {
+	.feature:nth-child(1) {
+	  background-color: $Gold;
+	}
+	.feature:nth-child(2) {
+	  padding: 0;
+	}
+  }
+  .bottom.row {
+	.feature:nth-child(1) {
+	  padding: 0;
+	}
+	.feature:nth-child(2) {
+	  background-color: $Green;
+	}
+  }
+  .card {
+	border: none;
+	width: 100%;
+  }
+}

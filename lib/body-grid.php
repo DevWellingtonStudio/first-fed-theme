@@ -6,7 +6,6 @@
 add_action('genesis_after_content_sidebar_wrap', 'add_body_grid', 5);
 function add_body_grid() {
 
-
 	$body_grid_img_one = get_post_meta( get_the_ID(), 'body-grid-img-one', true );
 	$get_imageone_id = attachment_url_to_postid( $body_grid_img_one );
 	$alt1 = get_post_meta( $get_imageone_id, '_wp_attachment_image_alt', true );

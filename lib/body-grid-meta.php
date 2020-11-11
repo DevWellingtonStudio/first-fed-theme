@@ -115,16 +115,3 @@ function body_grid_meta_save($post_id) {
 	  update_post_meta( $post_id, 'grid-content', $_POST[ 'grid-content' ] );
 	}
 }
-
-add_action( 'admin_enqueue_scripts', 'bgrid_image_enqueue' );
-function bgrid_image_enqueue() {
-	// Registers and enqueues the required javascript for image management within wp dashboard.
-	wp_register_script( 'meta-box-image', BFG_THEME_JS  . 'meta.js', array( 'jquery' ) );
-	wp_localize_script( 'meta-box-image', 'meta_image',
-		array(
-			'title' => __( 'Choose or Upload an Image', 'firstfed-for-genesis' ),
-			'button' => __( 'Use this image', 'firstfed-for-genesis' ),
-		)
-	);
-	wp_enqueue_script( 'meta-box-image' );
-}

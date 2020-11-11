@@ -11,7 +11,6 @@
 		$jumbotron_content  = get_post_meta( get_the_ID(), 'jumbotron-content', true );
 		$page_featured_row  = get_post_meta( get_the_ID(), 'page-featured-row', true );
 
-
 		if(is_page() && !is_front_page() && !is_home()) {
 
 			if ( has_post_thumbnail() ) {
