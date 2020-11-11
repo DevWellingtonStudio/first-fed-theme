@@ -21,7 +21,7 @@ function add_parallax_frontpage_top() {
 		echo '<div class="container-fluid parallax-cont">
 						<div class="parallax-window">
 							<div class="parallax-slider">
-							<div style="position:absolute; top: 400px; left: 400px;">';
+							<div class="parallax-content">';
 							if ( $parallax_title !== '' ) {
 								echo '<h1 > ' . $parallax_title . '</h1 >';
 							}

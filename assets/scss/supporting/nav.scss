@@ -37,7 +37,14 @@ a.navbar-brand {
 	#nav-primary {
 	  li a {
 		color: $Black;
+		font-size: 1.5rem;
+	  }
+	  li:nth-child(n+2) {
+		padding-left: 1em;
 	  }
 	}
   }
+}
+.nav-primary {
+  padding: 1.618em 5em 1.618em 5em;
 }

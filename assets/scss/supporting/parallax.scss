@@ -5,3 +5,16 @@
   min-height: 400px;
   background: transparent;
 }
+
+.parallax-content {
+  position: relative;
+  top: 50%;
+  left: 10%;
+  h1 {
+	color: $White;
+  }
+  .btn-green {
+	background-color: $Green;
+	color: $White;
+  }
+}

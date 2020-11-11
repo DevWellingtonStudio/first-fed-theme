@@ -74,11 +74,11 @@ function parallax_meta_save($post_id) {
 
 	// Checks for input and sanitizes/saves if needed
 	if ( isset( $_POST['parallax-title'] ) ) {
-		update_post_meta( $post_id, 'parallax-title', sanitize_text_field( $_POST['parallax-title'] ) );
+		update_post_meta( $post_id, 'parallax-title', $_POST['parallax-title'] );
 	}
 
 	if ( isset( $_POST['parallax-content'] ) ) {
-		update_post_meta( $post_id, 'parallax-content', sanitize_text_field( $_POST['parallax-content'] ) );
+		update_post_meta( $post_id, 'parallax-content', $_POST['parallax-content'] );
 	}
 
 	if ( isset( $_POST['featured-row'] ) ) {
