@@ -81,7 +81,8 @@ add_action( 'customize_register', function( $wp_customize ) {
 		'choices' => array(
 			'light' => __( 'Light', 'firstfed-for-genesis' ),
 			'dark' => __( 'Dark', 'firstfed-for-genesis' ),
-			'primary' => __( 'Primary', 'firstfed-for-genesis' )
+			'primary' => __( 'Primary', 'firstfed-for-genesis' ),
+			'light-white' => __( 'Light White', 'firstfed-for-genesis' )
 		)
 	) );
 
@@ -144,7 +145,8 @@ add_action( 'customize_register', function( $wp_customize ) {
 		'choices' => array(
 			'light' => __( 'Light', 'firstfed-for-genesis' ),
 			'dark' => __( 'Dark', 'firstfed-for-genesis' ),
-			'primary' => __( 'Primary', 'firstfed-for-genesis' )
+			'primary' => __( 'Primary', 'firstfed-for-genesis' ),
+			'light-white' => __( 'Light White', 'firstfed-for-genesis' )
 		)
 	) );
 
@@ -160,7 +162,8 @@ add_action( 'customize_register', function( $wp_customize ) {
 		'choices' => array(
 			'light' => __( 'Light', 'firstfed-for-genesis' ),
 			'dark' => __( 'Dark', 'firstfed-for-genesis' ),
-			'primary' => __( 'Primary', 'firstfed-for-genesis' )
+			'primary' => __( 'Primary', 'firstfed-for-genesis' ),
+			'light-white' => __( 'Light White', 'firstfed-for-genesis' )
 		)
 	) );
 } );

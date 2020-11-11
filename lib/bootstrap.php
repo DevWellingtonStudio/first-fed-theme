@@ -16,7 +16,7 @@ add_action( 'get_header', function() {
     $wraps = array(
         'footer-widgets'
     );
-    
+
     foreach( $wraps as $wrap ) {
         $context= "genesis_structural_wrap-$wrap";
         add_filter( $context, 'bfg_filter_structural_wrap', 10, 2 );
@@ -39,7 +39,7 @@ function bfg_filter_structural_wrap( $output, $original_output ) {
 add_action( 'genesis_meta', 'bfg_add_array_filters_genesis_attr' );
 function bfg_add_array_filters_genesis_attr() {
     $filters = bfg_merge_genesis_attr_classes();
-    
+
     foreach( array_keys( $filters ) as $context ) {
         $context = "genesis_attr_$context";
         add_filter( $context, 'bfg_add_markup_sanitize_classes', 10, 2 );
@@ -49,13 +49,13 @@ function bfg_add_array_filters_genesis_attr() {
 // Clean classes output
 function bfg_add_markup_sanitize_classes( $attr, $context ) {
     $classes = array();
-    
+
     if ( has_filter( 'bfg_clean_classes_output' ) ) {
         $classes = apply_filters( 'bfg_clean_classes_output', $classes, $context, $attr );
     }
-    
+
     $value = isset( $classes[$context] ) ? $classes[$context] : array();
-    
+
     if ( is_array( $value ) ) {
         $classes_array = $value;
     } else {
@@ -124,15 +124,19 @@ function bfg_merge_genesis_attr_classes() {
             $navclasses[] = 'navbar-dark';
             $navclasses[] = 'bg-primary';
             break;
+		    case 'light-white':
+			    $navclasses[] = 'navbar-light-white';
+			    $navclasses[] = 'bg-light-white';
+			    break;
     }
 
     $classes['nav-primary'] = esc_attr( implode( ' ', $navclasses ) );
 
     // Footer Class
     $footerwidgetbg = get_theme_mod( 'footerwidgetbg', 'dark' );
-    
+
     $footerwidgetclasses = array();
-    
+
     if ( $footerwidgetbg !== 'primary' ) {
         $footerwidgetclasses[] = 'text-muted';
     }
@@ -153,7 +157,7 @@ function bfg_merge_genesis_attr_classes() {
     $footerclasses[] = 'bg-' . $footerbg;
 
     $classes['site-footer'] = esc_attr( implode( ' ', $footerclasses ) );
-    
+
     if ( has_filter( 'bfg_add_classes' ) ) {
         $classes = apply_filters( 'bfg_add_classes', $classes );
     }
@@ -176,7 +180,7 @@ add_filter('bfg_add_classes', 'bfg_modify_classes_based_on_template', 10, 3);
 function bfg_layout_options_modify_classes_to_add( $classes_to_add ) {
 
     $layout = genesis_site_layout();
-    
+
     if ( 'full-width-content' === $layout ) {
         $classes_to_add['content'] = 'col-sm-12';
     }
