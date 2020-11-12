@@ -28,8 +28,9 @@ function add_parallax_frontpage_top() {
 							if ( $parallax_content !== '' ) {
 								echo '<p style="color:white; font-size: 26px;">' . $parallax_content . '</p>';
 							}
-							echo '</div>
-							<img src="' . $parallax_bg_img . '" style="width:100%;" sizes="100vw" alt="' . $alt . '">
+							echo '
+							</div>
+							<img src="' . $parallax_bg_img . '" style="width:100%;" sizes="" alt="' . $alt . '">
 							</div>
 						</div>
 					</div>';

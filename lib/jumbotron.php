@@ -3,7 +3,7 @@
 	 * Adds Jumbotron to pages
 	 */
 
-	add_action('genesis_after_header', 'add_jumbotron', 5);
+	add_action('genesis_after_header', 'add_jumbotron', 15);
 	function add_jumbotron() { global $post;
 		$default  = '';
 		$jumbotron_bg_img   = get_the_post_thumbnail_url( $post->ID, 'full' );

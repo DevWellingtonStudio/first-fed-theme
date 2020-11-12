@@ -6,11 +6,11 @@
 }
 
 /* Move navigation below wp-admin bar */
-.logged-in {
+/*.logged-in {
     .navbar-fixed-top {
         margin-top: 32px; // Move navigation below wp-admin bar
     }
-}
+}*/
 .navbar {
   padding: {
 	  left: 0;
@@ -22,7 +22,7 @@ a.navbar-brand {
 }
 
 .navbar-light-white.bg-light-white {
-  background-color: rgba(230,230,230, 0.8);
+  background-color: rgba(230, 230, 230, 0.8);
 }
 
 .navbar-light-white {
