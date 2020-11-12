@@ -16,6 +16,10 @@
   }
   .feature:nth-child(1) {
 	padding-left: 0;
+	img {
+	  min-height: 486px;
+	  object-fit: cover;
+	}
 	.card {
 	  background-color: transparent;
 	  border: none;
@@ -39,6 +43,14 @@
   .card {
 	border: none;
 	background-color: transparent;
+  }
+}
+
+#featured-right-content {
+  height: 100%;
+  .card-body {
+	display: flex;
+	align-items: center;
   }
 }
 
