@@ -84,6 +84,28 @@
 			  </div>
 
 		  </div>
+
+		  <div class="row">
+
+			<h2>Additional Features and Featurettes</h2>
+
+			<div class="col-md-6">
+			  <label for="addtl-feat-img-one" class="addtl-feat-img-one"><?php _e( '<b>Additional Featurette Image One</b>', 'firstfed-for-genesis' );?></label><br>
+			  <input type="text" name="addtl-feat-img-one" id="addtl-feat-img-one" value="<?php if ( isset ( $page_features_grid_meta['addtl-feat-img-one'] ) ) echo $page_features_grid_meta['addtl-feat-img-one'][0];?>" />
+			  <input type="button" id="addtl-feat-img-one-button" class="addtl-feat-img-one" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			</div>
+
+			<div class="col-md-6">
+			  <strong><label for="alt-feat-text-one" class="alt-feat-text-one"><?php _e( 'Feature Three Text', 'firstfed-for-genesis' )?></label></strong>
+			  <textarea style="width: 100%;" rows="6" name="alt-feat-text-one" id="alt-feat-text-one"><?php if ( isset ( $page_features_grid_meta['alt-feat-text-one'] ) ) echo $page_features_grid_meta['alt-feat-text-one'][0]; ?></textarea>
+			</div>
+
+
+
+		  </div>
+
+
+
 		</div>
 
 <?php }
@@ -129,5 +151,11 @@
 		}
 		if ( isset( $_POST['feat-cta-text-3'] ) ) {
 		  update_post_meta( $post_id, 'feat-cta-text-3', $_POST['feat-cta-text-3'] );
+		}
+		if ( isset( $_POST['addtl-feat-img-one'] ) ) {
+		  update_post_meta( $post_id, 'addtl-feat-img-one', $_POST['addtl-feat-img-one'] );
+		}
+		if ( isset( $_POST['alt-feat-text-one'] ) ) {
+		  update_post_meta( $post_id, 'alt-feat-text-one', $_POST['alt-feat-text-one'] );
 		}
 	}

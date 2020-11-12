@@ -34,3 +34,25 @@
 	width: 100%;
   }
 }
+
+ul#features-page-list  {
+  list-style: none;
+  .fas.fa-check-circle {
+	color: $Green;
+  }
+}
+
+/** FEATURED SECTION */
+#featured-content-section {
+  .feature-page-row.row {
+	.img-cont.col-12 {
+	  padding: 0;
+	  img {
+		height: 600px;
+		max-height: 600px;
+		object-fit: cover;
+		width: 100%;
+	  }
+	}
+  }
+}

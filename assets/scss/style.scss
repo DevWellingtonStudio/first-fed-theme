@@ -11,9 +11,6 @@
  * Domain Path: /languages
  * Template: genesis
  */
-
-// Typography
-@import "supporting/typography";
 @import url("https://use.typekit.net/bjl0gma.css");
 
 // Bootstrap Core Variable Override
@@ -98,3 +95,6 @@
 
 // Full Width Video
 @import "supporting/full-width-video";
+
+// Typography
+@import "supporting/typography";

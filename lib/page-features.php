@@ -69,6 +69,21 @@
 					<div class="card-body">
 						'. $feat_cta_text_three .'
 					</div>
+				</div>';
+
+
+			$addtl_feat_img_one = get_post_meta(get_the_ID(), 'addtl-feat-img-one', true );
+			$get_imageone_id = attachment_url_to_postid( $addtl_feat_img_one );
+			$feat_one_alt = get_post_meta( $get_imageone_id, '_wp_attachment_image_alt', true );
+
+			$alt_feat_text_one  = get_post_meta(get_the_ID(), 'alt-feat-text-one', true );
+
+		echo	'<div id="featured-content-section">
+					<div class="feature-page-row row">
+					<div class="img-cont col-12">
+						<img class="img-fluid" src="'. $addtl_feat_img_one .'" alt="'. $feat_one_alt .'">
+					</div>
+					</div>
 				</div>
 
 			</div>
