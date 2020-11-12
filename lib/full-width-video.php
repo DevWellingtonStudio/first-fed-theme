@@ -4,8 +4,7 @@
  */
 
 add_action('genesis_after_content_sidebar_wrap', 'add_full_width_video', 15);
-function add_full_width_video()
-{
+function add_full_width_video() {
 	$default = '';
 	$full_width_video_fp = get_post_meta(get_the_ID(), 'full-width-video-fp', true);
 	$full_width_video_title = get_post_meta(get_the_ID(), 'full-width-video-title', true);
