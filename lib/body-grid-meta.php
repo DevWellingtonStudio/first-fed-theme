@@ -64,9 +64,17 @@ $body_grid_meta  = get_post_meta( $post->ID );
 			  </div>
 			</div>
 			<div style="width:100%; max-width: 100%;" class="card">
-			  <strong><label for="grid-content" class="grid-content"><?php _e( 'Grid CTA Content', 'firstfed-for-genesis' )?></label></strong>
-			  <textarea style="width: 100%;" rows="6" name="grid-content" id="grid-content"><?php if ( isset ( $body_grid_meta['grid-content'] ) ) echo $body_grid_meta['grid-content'][0]; ?></textarea>
+			<strong><label for="grid-content" class="grid-content"><?php _e( 'Grid CTA Content', 'firstfed-for-genesis' )?></label></strong>
+			<textarea style="width: 100%;" rows="6" name="grid-content" id="grid-content"><?php if ( isset ( $body_grid_meta['grid-content'] ) ) echo $body_grid_meta['grid-content'][0]; ?></textarea>
 			</div>
+		  	<div class="col-12">
+			<strong><label for="full-width-video-fp" class="full-width-video-fp"><?php _e('Full Width Video','firstfed-for-genesis')?></label></strong>
+			<input type="url" style="width:100%;" name="full-width-video-fp" id="full-width-video-fp" value="<?php if (isset($body_grid_meta['full-width-video-fp'])) echo $body_grid_meta['full-width-video-fp'][0]; ?>" />
+			<strong><label for="full-width-video-title" class="full-width-video-title"><?php _e('Full Width Video Title','firstfed-for-genesis')?></label></strong>
+			<input type="text" style="width:100%;" name="full-width-video-title" id="full-width-video-title" value="<?php if (isset($body_grid_meta['full-width-video-title'])) echo $body_grid_meta['full-width-video-title'][0]; ?>" />
+			<strong><label for="full-width-video-text" class="full-width-video-text"><?php _e( 'Full Width Video Text', 'firstfed-for-genesis' )?></label></strong>
+			<textarea style="width: 100%;" rows="4" name="full-width-video-text" id="full-width-video-text"><?php if ( isset ( $body_grid_meta['full-width-video-text'] ) ) echo $body_grid_meta['full-width-video-text'][0]; ?></textarea>
+		  </div>
 		</div>
 	</div>
 
@@ -114,4 +122,13 @@ function body_grid_meta_save($post_id) {
 	if( isset( $_POST[ 'grid-content' ] ) ) {
 	  update_post_meta( $post_id, 'grid-content', $_POST[ 'grid-content' ] );
 	}
+	if( isset( $_POST[ 'full-width-video-fp' ] ) ) {
+	  update_post_meta( $post_id, 'full-width-video-fp', $_POST[ 'full-width-video-fp' ] );
+	}
+	if( isset( $_POST[ 'full-width-video-title' ] ) ) {
+	  update_post_meta( $post_id, 'full-width-video-title', $_POST[ 'full-width-video-title' ] );
+	}
+  if( isset( $_POST[ 'full-width-video-text' ] ) ) {
+	update_post_meta( $post_id, 'full-width-video-text', $_POST[ 'full-width-video-text' ] );
+  }
 }
