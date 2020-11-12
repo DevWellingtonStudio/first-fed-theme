@@ -35,25 +35,25 @@ function add_body_grid() {
 					<div class="container-fluid">
 						<div class="row">
 							<div class="title-area text-center">
-							<h3>Grid Body</h3>
+							<h3>WE SERVICE</h3>
 							</div>
 							<div class="container">
 							<div class="row top-row justify-content-center">
-							<div class="col-md-3 feature">
+							<div class="col-md-5 feature">
 							<img src="' . $body_grid_img_one . '" class="img-fluid" alt="' . $alt1 . '"/>
 							<h4>' . $gridimg_one_title . '</h4>
 							</div>
-							<div class="col-md-3 feature">
+							<div class="col-md-5 feature">
 							<img src="' . $body_grid_img_two . '" class="img-fluid" alt="' . $alt2 . '"/>
 							<h4>' . $gridimg_two_title . '</h4>
 							</div>
 							</div>
 							<div class="row bottom-row justify-content-center">
-							<div class="col-md-3 feature">
+							<div class="col-md-5 feature">
 							<img src="' . $body_grid_img_three . '" class="img-fluid" alt="' . $alt3 . '"/>
 							<h4>' . $gridimg_three_title . '</h4>
 							</div>
-							<div class="col-md-3 feature">
+							<div class="col-md-5 feature">
 							<img src="' . $body_grid_img_four . '" class="img-fluid" alt="' . $alt4 . '"/>
 							<h4>' . $gridimg_four_title . '</h4>
 							</div>

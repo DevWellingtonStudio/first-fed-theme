@@ -13,9 +13,10 @@
 #fp-side-by-side {
   .row {
 	background-color: $White;
+	padding: 5px 0 0 0;
   }
   .feature:nth-child(1) {
-	padding-left: 0;
+	padding: 0 5px 0 0;
 	img {
 	  min-height: 486px;
 	  object-fit: cover;
@@ -27,6 +28,7 @@
   }
   .feature:nth-child(2) {
 	background-color: $Gold;
+	padding: 0 0 0 0;
 	.card {
 	  background-color: transparent;
 	  border: none;
@@ -82,10 +84,16 @@
 @media (max-width: 575.98px) {}
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+  #fp-side-by-side .feature:first-child {
+	padding: 0;
+  }
+}
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {}
+@media (max-width: 991.98px) {
+
+}
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {}

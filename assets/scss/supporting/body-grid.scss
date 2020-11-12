@@ -4,7 +4,37 @@
   width: 100%;
 }
 #grid-body {
-  background-color: $DarkGrey;
+  padding: 4rem 0;
+  background-color: $LightGrey;
   margin-left: -15px;
   margin-right: -15px;
-}
+  .container-fluid {
+	.row {
+	  .title-area {
+		h3 {
+		  margin: 0 0 1.418em 0;
+		  font-size: 2.5rem;
+		  color: $Green;
+		}
+	  }
+		.container {
+		  .top-row {
+			margin-bottom: 2.618em;
+		  }
+		  .row {
+			.feature {
+			  h4 {
+				text-align: center;
+				margin-top: 0.6em;
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+
+
+
+
+
