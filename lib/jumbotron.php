@@ -15,7 +15,7 @@
 
 			if ( has_post_thumbnail() ) {
 				echo '
-			<div class="jumbotron jumbotron-fluid" style="background-image:url('. $jumbotron_bg_img .');">
+			<div id="jumbotron-cont" class="jumbotron jumbotron-fluid" style="background-image:url('. $jumbotron_bg_img .');">
 			  <div class="container">
 			    <h1 class="display-4">'. $jumbotron_title .'</h1>
 			    <p class="lead">'. $jumbotron_content .'</p>
