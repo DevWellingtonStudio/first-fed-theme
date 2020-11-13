@@ -11,6 +11,8 @@
 }
 
 #fp-side-by-side {
+  position: relative;
+  z-index: 2;
   .row {
 	background-color: $White;
 	padding: 5px 0 0 0;
