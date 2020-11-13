@@ -293,4 +293,150 @@ jQuery(document).ready( function($){ "use strict";
 	 alt_feat_img_one.open();
   });
 
+  // Instantiates the variable that holds the media library frame.
+  var addtl_featette_img_one;
+
+  // Runs when the image button is clicked.
+  $('#addtl-featette-img-one-button').click(function(e){
+
+	 // Prevents the default action from occuring.
+	 e.preventDefault();
+
+	 // If the frame already exists, re-open it.
+	 if ( addtl_featette_img_one ) {
+		addtl_featette_img_one.open();
+		return;
+	 }
+
+	 // Sets up the media library frame
+	 addtl_featette_img_one = wp.media.frames.addtl_featette_img_one = wp.media({
+		title: meta_image.title,
+		button: { text:  meta_image.button },
+		library: { type: 'image' }
+	 });
+
+	 // Runs when an image is selected.
+	 addtl_featette_img_one.on('select', function(){
+
+		// Grabs the attachment selection and creates a JSON representation of the model.
+		var media_attachment = addtl_featette_img_one.state().get('selection').first().toJSON();
+
+		// Sends the attachment URL to our custom image input field.
+		$('#addtl-featette-img-one').val(media_attachment.url);
+	 });
+
+	 // Opens the media library frame.
+	 addtl_featette_img_one.open();
+  });
+
+
+  // Instantiates the variable that holds the media library frame.
+  var addtl_featette_img_two;
+
+  // Runs when the image button is clicked.
+  $('#addtl-featette-img-two-button').click(function(e){
+
+	 // Prevents the default action from occuring.
+	 e.preventDefault();
+
+	 // If the frame already exists, re-open it.
+	 if ( addtl_featette_img_two ) {
+		addtl_featette_img_two.open();
+		return;
+	 }
+
+	 // Sets up the media library frame
+	 addtl_featette_img_two = wp.media.frames.addtl_featette_img_two = wp.media({
+		title: meta_image.title,
+		button: { text:  meta_image.button },
+		library: { type: 'image' }
+	 });
+
+	 // Runs when an image is selected.
+	 addtl_featette_img_two.on('select', function(){
+
+		// Grabs the attachment selection and creates a JSON representation of the model.
+		var media_attachment = addtl_featette_img_two.state().get('selection').first().toJSON();
+
+		// Sends the attachment URL to our custom image input field.
+		$('#addtl-featette-img-two').val(media_attachment.url);
+	 });
+
+	 // Opens the media library frame.
+	 addtl_featette_img_two.open();
+  });
+
+  // Instantiates the variable that holds the media library frame.
+  var image_text_overlay_uploader;
+
+  // Runs when the image button is clicked.
+  $('#image-text-overlay-img-button').click(function(e){
+
+	 // Prevents the default action from occuring.
+	 e.preventDefault();
+
+	 // If the frame already exists, re-open it.
+	 if ( image_text_overlay_uploader ) {
+		image_text_overlay_uploader.open();
+		return;
+	 }
+
+	 // Sets up the media library frame
+	 image_text_overlay_uploader = wp.media.frames.image_text_overlay_uploader = wp.media({
+		title: meta_image.title,
+		button: { text:  meta_image.button },
+		library: { type: 'image' }
+	 });
+
+	 // Runs when an image is selected.
+	 image_text_overlay_uploader.on('select', function(){
+
+		// Grabs the attachment selection and creates a JSON representation of the model.
+		var media_attachment = image_text_overlay_uploader.state().get('selection').first().toJSON();
+
+		// Sends the attachment URL to our custom image input field.
+		$('#image-text-overlay-img').val(media_attachment.url);
+	 });
+
+	 // Opens the media library frame.
+	 image_text_overlay_uploader.open();
+  });
+
+
+  // Instantiates the variable that holds the media library frame.
+  var footer_featurette_image;
+
+  // Runs when the image button is clicked.
+  $('#footer-row-featurette-img-button').click(function(e){
+
+	 // Prevents the default action from occuring.
+	 e.preventDefault();
+
+	 // If the frame already exists, re-open it.
+	 if ( footer_featurette_image ) {
+		footer_featurette_image.open();
+		return;
+	 }
+
+	 // Sets up the media library frame
+	 footer_featurette_image = wp.media.frames.footer_featurette_image = wp.media({
+		title: meta_image.title,
+		button: { text:  meta_image.button },
+		library: { type: 'image' }
+	 });
+
+	 // Runs when an image is selected.
+	 footer_featurette_image.on('select', function(){
+
+		// Grabs the attachment selection and creates a JSON representation of the model.
+		var media_attachment = footer_featurette_image.state().get('selection').first().toJSON();
+
+		// Sends the attachment URL to our custom image input field.
+		$('#footer-row-featurette-img').val(media_attachment.url);
+	 });
+
+	 // Opens the media library frame.
+	 footer_featurette_image.open();
+  });
+
 });

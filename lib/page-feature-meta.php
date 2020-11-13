@@ -89,23 +89,62 @@
 
 			<h2>Additional Features and Featurettes</h2>
 
-			<div class="col-md-6">
-			  <label for="addtl-feat-img-one" class="addtl-feat-img-one"><?php _e( '<b>Additional Featurette Image One</b>', 'firstfed-for-genesis' );?></label><br>
+			<div class="col-12">
+			  <label for="addtl-feat-img-one" class="addtl-feat-img-one"><?php _e( '<b>Additional Feature Image One</b>', 'firstfed-for-genesis' );?></label><br>
 			  <input type="text" name="addtl-feat-img-one" id="addtl-feat-img-one" value="<?php if ( isset ( $page_features_grid_meta['addtl-feat-img-one'] ) ) echo $page_features_grid_meta['addtl-feat-img-one'][0];?>" />
 			  <input type="button" id="addtl-feat-img-one-button" class="addtl-feat-img-one" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
 			</div>
 
 			<div class="col-md-6">
-			  <strong><label for="alt-feat-text-one" class="alt-feat-text-one"><?php _e( 'Feature Three Text', 'firstfed-for-genesis' )?></label></strong>
-			  <textarea style="width: 100%;" rows="6" name="alt-feat-text-one" id="alt-feat-text-one"><?php if ( isset ( $page_features_grid_meta['alt-feat-text-one'] ) ) echo $page_features_grid_meta['alt-feat-text-one'][0]; ?></textarea>
+			  <label for="addtl-featette-img-one" class="addtl-featette-img-one"><?php _e( '<b>Additional Featurette Image One</b>', 'firstfed-for-genesis' );?></label><br>
+			  <input type="text" name="addtl-featette-img-one" id="addtl-featette-img-one" value="<?php if ( isset ( $page_features_grid_meta['addtl-featette-img-one'] ) ) echo $page_features_grid_meta['addtl-featette-img-one'][0];?>" />
+			  <input type="button" id="addtl-featette-img-one-button" class="addtl-featette-img-one" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
 			</div>
 
+			<div class="col-md-6">
+			  <strong><label for="addtl-featette-text-one" class="addtl-featette-text-one"><?php _e( 'Additional Featurette Text, One', 'firstfed-for-genesis' )?></label></strong>
+			  <textarea style="width: 100%;" rows="6" name="addtl-featette-text-one" id="addtl-featette-text-one"><?php if ( isset ( $page_features_grid_meta['addtl-featette-text-one'] ) ) echo $page_features_grid_meta['addtl-featette-text-one'][0]; ?></textarea>
+			</div>
 
+			<div class="col-12">
+			  <strong><label for="addtl-featette-title-two" class="addtl-featette-title-two"><?php _e( '<b>Featurette Two Title</b>', 'firstfed-for-genesis' )?></label></strong>
+			  <textarea style="width: 100%;" rows="1" name="addtl-featette-title-two" id="addtl-featette-title-two"><?php if ( isset ( $page_features_grid_meta['addtl-featette-title-two'] ) ) echo $page_features_grid_meta['addtl-featette-title-two'][0]; ?></textarea>
+			</div>
+
+			<div class="col-md-6">
+			  <label for="addtl-featette-img-two" class="addtl-featette-img-two"><?php _e( '<b>Additional Featurette Image Two</b>', 'firstfed-for-genesis' );?></label><br>
+			  <input type="text" name="addtl-featette-img-two" id="addtl-featette-img-two" value="<?php if ( isset ( $page_features_grid_meta['addtl-featette-img-two'] ) ) echo $page_features_grid_meta['addtl-featette-img-two'][0];?>" />
+			  <input type="button" id="addtl-featette-img-two-button" class="addtl-featette-img-two" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			</div>
+
+			<div class="col-md-6">
+			  <strong><label for="addtl-featette-text-two" class="addtl-featette-text-two"><?php _e( '<b>Additional Featurette Text, Two</b>', 'firstfed-for-genesis' )?></label></strong>
+			  <textarea style="width: 100%;" rows="6" name="addtl-featette-text-two" id="addtl-featette-text-two"><?php if ( isset ( $page_features_grid_meta['addtl-featette-text-two'] ) ) echo $page_features_grid_meta['addtl-featette-text-two'][0]; ?></textarea>
+			</div>
+
+			<div class="col-md-6">
+			  <label for="image-text-overlay-img" class="image-text-overlay-img"><?php _e( '<b>Text Overlay Image</b>', 'firstfed-for-genesis' );?></label><br>
+			  <input type="text" name="image-text-overlay-img" id="image-text-overlay-img" value="<?php if ( isset ( $page_features_grid_meta['image-text-overlay-img'] ) ) echo $page_features_grid_meta['image-text-overlay-img'][0];?>" />
+			  <input type="button" id="image-text-overlay-img-button" class="image-text-overlay-img" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			</div>
+
+			<div class="col-md-6">
+			  <strong><label for="overlay-text-area" class="overlay-text-area"><?php _e( '<b>Overlay Text</b>', 'firstfed-for-genesis' )?></label></strong>
+			  <textarea style="width: 100%;" rows="6" name="overlay-text-area" id="overlay-text-area"><?php if ( isset ( $page_features_grid_meta['overlay-text-area'] ) ) echo $page_features_grid_meta['overlay-text-area'][0]; ?></textarea>
+			</div>
+
+			<div class="col-md-6">
+			  <label for="footer-row-featurette-img" class="footer-row-featurette-img"><?php _e( '<b>Text Overlay Image</b>', 'firstfed-for-genesis' );?></label><br>
+			  <input type="text" name="footer-row-featurette-img" id="footer-row-featurette-img" value="<?php if ( isset ( $page_features_grid_meta['footer-row-featurette-img'] ) ) echo $page_features_grid_meta['footer-row-featurette-img'][0];?>" />
+			  <input type="button" id="footer-row-featurette-img-button" class="footer-row-featurette-img" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
+			</div>
+
+			<div class="col-md-6">
+			  <strong><label for="footer-row-text" class="footer-row-text"><?php _e( '<b>Overlay Text</b>', 'firstfed-for-genesis' )?></label></strong>
+			  <textarea style="width: 100%;" rows="6" name="footer-row-text" id="footer-row-text"><?php if ( isset ( $page_features_grid_meta['footer-row-text'] ) ) echo $page_features_grid_meta['footer-row-text'][0]; ?></textarea>
+			</div>
 
 		  </div>
-
-
-
 		</div>
 
 <?php }
@@ -158,4 +197,33 @@
 		if ( isset( $_POST['alt-feat-text-one'] ) ) {
 		  update_post_meta( $post_id, 'alt-feat-text-one', $_POST['alt-feat-text-one'] );
 		}
+		if ( isset( $_POST['addtl-featette-img-one'] ) ) {
+		  update_post_meta( $post_id, 'addtl-featette-img-one', $_POST['addtl-featette-img-one'] );
+		}
+		if ( isset( $_POST['addtl-featette-text-one'] ) ) {
+		  update_post_meta( $post_id, 'addtl-featette-text-one', $_POST['addtl-featette-text-one'] );
+		}
+		if ( isset( $_POST['addtl-featette-title-two'] ) ) {
+		  update_post_meta( $post_id, 'addtl-featette-title-two', $_POST['addtl-featette-title-two'] );
+		}
+		if ( isset( $_POST['addtl-featette-text-two'] ) ) {
+		  update_post_meta( $post_id, 'addtl-featette-text-two', $_POST['addtl-featette-text-two'] );
+		}
+		if ( isset( $_POST['addtl-featette-img-two'] ) ) {
+		  update_post_meta( $post_id, 'addtl-featette-img-two', $_POST['addtl-featette-img-two'] );
+		}
+		if ( isset( $_POST['image-text-overlay-img'] ) ) {
+		  update_post_meta( $post_id, 'image-text-overlay-img', $_POST['image-text-overlay-img'] );
+		}
+		if ( isset( $_POST['overlay-text-area'] ) ) {
+		  update_post_meta( $post_id, 'overlay-text-area', $_POST['overlay-text-area'] );
+		}
+		if ( isset( $_POST['footer-row-featurette-img'] ) ) {
+		  update_post_meta( $post_id, 'footer-row-featurette-img', $_POST['footer-row-featurette-img'] );
+		}
+		if ( isset( $_POST['footer-row-text'] ) ) {
+		  update_post_meta( $post_id, 'footer-row-text', $_POST['footer-row-text'] );
+		}
+
+
 	}

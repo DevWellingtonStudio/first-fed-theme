@@ -43,6 +43,13 @@ ul#features-page-list  {
 }
 
 /** FEATURED SECTION */
+#additional-featurette {
+  background-color: $LightGrey;
+  padding: 2.618em 1.618em;
+  h2 {
+	text-align: center;
+  }
+}
 #featured-content-section {
   .feature-page-row.row {
 	.img-cont.col-12 {
@@ -55,4 +62,18 @@ ul#features-page-list  {
 	  }
 	}
   }
+}
+
+.image-text-overlay.row {
+  position: relative;
+  .card {
+	background-color: rgba(255,255,255, 0.5);
+	width: 40%;
+	position: absolute;
+	bottom: 25%;
+	left: 10%;
+  }
+}
+.footer-row-featurette {
+  background-color: $Gold;
 }
