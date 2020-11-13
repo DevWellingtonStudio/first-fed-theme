@@ -134,13 +134,13 @@
 			</div>
 
 			<div class="col-md-6">
-			  <label for="footer-row-featurette-img" class="footer-row-featurette-img"><?php _e( '<b>Text Overlay Image</b>', 'firstfed-for-genesis' );?></label><br>
+			  <label for="footer-row-featurette-img" class="footer-row-featurette-img"><?php _e( '<b>Footer Featurette</b>', 'firstfed-for-genesis' );?></label><br>
 			  <input type="text" name="footer-row-featurette-img" id="footer-row-featurette-img" value="<?php if ( isset ( $page_features_grid_meta['footer-row-featurette-img'] ) ) echo $page_features_grid_meta['footer-row-featurette-img'][0];?>" />
 			  <input type="button" id="footer-row-featurette-img-button" class="footer-row-featurette-img" value="<?php _e( 'Choose or Upload an Image', 'firstfed-for-genesis' );?>" />
 			</div>
 
 			<div class="col-md-6">
-			  <strong><label for="footer-row-text" class="footer-row-text"><?php _e( '<b>Overlay Text</b>', 'firstfed-for-genesis' )?></label></strong>
+			  <strong><label for="footer-row-text" class="footer-row-text"><?php _e( '<b>Footer Featurette Text</b>', 'firstfed-for-genesis' )?></label></strong>
 			  <textarea style="width: 100%;" rows="6" name="footer-row-text" id="footer-row-text"><?php if ( isset ( $page_features_grid_meta['footer-row-text'] ) ) echo $page_features_grid_meta['footer-row-text'][0]; ?></textarea>
 			</div>
 
