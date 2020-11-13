@@ -52,6 +52,14 @@ $body_grid_meta  = get_post_meta( $post->ID );
 			<strong><label for="gridimg-two-title" class="gridimg-two-title"><?php _e('Image Two Title','firstfed-for-genesis')?></label></strong>
 			<input type="text" name="gridimg-two-title" id="gridimg-two-title" value="<?php if (isset($body_grid_meta['gridimg-two-title'])) echo $body_grid_meta['gridimg-two-title'][0]; ?>" />
 		  	</div>
+			<div class="col-12">
+			<strong><label for="body-grid-link-two" class="body-grid-link-two"><?php _e('Image Two Link','firstfed-for-genesis')?></label></strong>
+			<input type="text" name="body-grid-link-two" id="body-grid-link-two" value="<?php if (isset($body_grid_meta['body-grid-link-two'])) echo $body_grid_meta['body-grid-link-two'][0]; ?>" />
+			</div>
+			<div class="col-12">
+			<strong><label for="body-grid-link-two-title" class="body-grid-link-two-title"><?php _e('Image Two Link Title','firstfed-for-genesis')?></label></strong>
+			<input type="text" name="body-grid-link-two-title" id="body-grid-link-two-title" value="<?php if (isset($body_grid_meta['body-grid-link-two-title'])) echo $body_grid_meta['body-grid-link-two-title'][0]; ?>" />
+			</div>
 			</div>
 			<div class="col-md-6">
 			<label for="body-grid-img-three" class="body-grid-img-three"><?php _e( '<b>Image Bottom Left</b>', 'firstfed-for-genesis' );?></label><br>
@@ -60,6 +68,14 @@ $body_grid_meta  = get_post_meta( $post->ID );
 		  	<div class="col-12">
 			<strong><label for="gridimg-three-title" class="gridimg-three-title"><?php _e('Image Three Title','firstfed-for-genesis')?></label></strong>
 			<input type="text" name="gridimg-three-title" id="gridimg-three-title" value="<?php if (isset($body_grid_meta['gridimg-three-title'])) echo $body_grid_meta['gridimg-three-title'][0]; ?>" />
+			</div>
+			<div class="col-12">
+			<strong><label for="body-grid-link-three" class="body-grid-link-three"><?php _e('Image Three Link','firstfed-for-genesis')?></label></strong>
+			<input type="text" name="body-grid-link-three" id="body-grid-link-three" value="<?php if (isset($body_grid_meta['body-grid-link-three'])) echo $body_grid_meta['body-grid-link-three'][0]; ?>" />
+			</div>
+			<div class="col-12">
+			<strong><label for="body-grid-link-three-title" class="body-grid-link-three-title"><?php _e('Image Three Link Title','firstfed-for-genesis')?></label></strong>
+			<input type="text" name="body-grid-link-three-title" id="body-grid-link-three-title" value="<?php if (isset($body_grid_meta['body-grid-link-three-title'])) echo $body_grid_meta['body-grid-link-three-title'][0]; ?>" />
 			</div>
 			</div>
 			<div class="col-md-6">
@@ -70,6 +86,14 @@ $body_grid_meta  = get_post_meta( $post->ID );
 			<strong><label for="gridimg-four-title" class="gridimg-four-title"><?php _e('Image Four Title','firstfed-for-genesis')?></label></strong>
 			<input type="text" name="gridimg-four-title" id="gridimg-four-title" value="<?php if (isset($body_grid_meta['gridimg-four-title'])) echo $body_grid_meta['gridimg-four-title'][0]; ?>" />
 		  	</div>
+			<div class="col-12">
+			<strong><label for="body-grid-link-four" class="body-grid-link-four"><?php _e('Image Two Link','firstfed-for-genesis')?></label></strong>
+			<input type="text" name="body-grid-link-four" id="body-grid-link-four" value="<?php if (isset($body_grid_meta['body-grid-link-four'])) echo $body_grid_meta['body-grid-link-four'][0]; ?>" />
+			</div>
+			<div class="col-12">
+			<strong><label for="body-grid-link-four-title" class="body-grid-link-four-title"><?php _e('Image Two Link Title','firstfed-for-genesis')?></label></strong>
+			<input type="text" name="body-grid-link-four-title" id="body-grid-link-four-title" value="<?php if (isset($body_grid_meta['body-grid-link-four-title'])) echo $body_grid_meta['body-grid-link-four-title'][0]; ?>" />
+			</div>
 			</div>
 			<div style="width:100%; max-width: 100%;" class="card">
 			<strong><label for="grid-content" class="grid-content"><?php _e( 'Grid CTA Content', 'firstfed-for-genesis' )?></label></strong>
@@ -121,17 +145,35 @@ function body_grid_meta_save($post_id) {
 	if( isset( $_POST[ 'gridimg-two-title' ] ) ) {
 	  update_post_meta( $post_id, 'gridimg-two-title', $_POST[ 'gridimg-two-title' ] );
 	}
+	if( isset( $_POST[ 'body-grid-link-two' ] ) ) {
+	  update_post_meta( $post_id, 'body-grid-link-two', $_POST[ 'body-grid-link-two' ] );
+	}
+	if( isset( $_POST[ 'body-grid-link-two-title' ] ) ) {
+	  update_post_meta( $post_id, 'body-grid-link-two-title', $_POST[ 'body-grid-link-two-title' ] );
+	}
 	if( isset( $_POST[ 'body-grid-img-three' ] ) ) {
 	  update_post_meta( $post_id, 'body-grid-img-three', $_POST[ 'body-grid-img-three' ] );
 	}
 	if( isset( $_POST[ 'gridimg-three-title' ] ) ) {
 	  update_post_meta( $post_id, 'gridimg-three-title', $_POST[ 'gridimg-three-title' ] );
 	}
+	if( isset( $_POST[ 'body-grid-link-three' ] ) ) {
+	  update_post_meta( $post_id, 'body-grid-link-three', $_POST[ 'body-grid-link-three' ] );
+	}
+	if( isset( $_POST[ 'body-grid-link-three-title' ] ) ) {
+	  update_post_meta( $post_id, 'body-grid-link-three-title', $_POST[ 'body-grid-link-three-title' ] );
+	}
 	if( isset( $_POST[ 'body-grid-img-four' ] ) ) {
 	  update_post_meta( $post_id, 'body-grid-img-four', $_POST[ 'body-grid-img-four' ] );
 	}
 	if( isset( $_POST[ 'gridimg-four-title' ] ) ) {
 	  update_post_meta( $post_id, 'gridimg-four-title', $_POST[ 'gridimg-four-title' ] );
+	}
+	if( isset( $_POST[ 'body-grid-link-four' ] ) ) {
+	  update_post_meta( $post_id, 'body-grid-link-four', $_POST[ 'body-grid-link-four' ] );
+	}
+	if( isset( $_POST[ 'body-grid-link-four-title' ] ) ) {
+	  update_post_meta( $post_id, 'body-grid-link-four-title', $_POST[ 'body-grid-link-four-title' ] );
 	}
 	if( isset( $_POST[ 'grid-content' ] ) ) {
 	  update_post_meta( $post_id, 'grid-content', $_POST[ 'grid-content' ] );
