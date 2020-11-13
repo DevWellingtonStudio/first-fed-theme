@@ -13,8 +13,12 @@
  */
 
 @font-face {
-  font-family: cocogoose-regular;
-  src: url(../../fonts/Webfonts-Cocogoose/Web-Fonts/cocogoosepro_regular_macroman/cocogoosepro-webfont.woff);
+  font-family: 'cocogoosepro';
+  src: url('../../fonts/Webfonts-Cocogoose/Web-Fonts/cocogoosepro_regular_macroman/cocogoosepro-webfont.woff2') format('woff2'),
+  url('../../fonts/Webfonts-Cocogoose/Web-Fonts/cocogoosepro_regular_macroman/cocogoosepro-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 @import url("https://use.typekit.net/bjl0gma.css");
