@@ -124,7 +124,7 @@ add_filter( 'get_custom_logo', function( $html ) {
 // Removes Title on Home Page or Front Page
 add_action( 'genesis_before_entry', 'centric_post_title', 10 );
 function centric_post_title() {
-	if ( is_front_page() || is_home() ) {
+	if ( is_front_page() || is_home() || is_page() ) {
 		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 	}
 }
