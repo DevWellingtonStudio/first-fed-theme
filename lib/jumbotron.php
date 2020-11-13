@@ -5,6 +5,8 @@
 
 	add_action('genesis_after_header', 'add_jumbotron', 15);
 	function add_jumbotron() { global $post;
+		global $post;
+		$post_id = $post->ID;
 		$default  = '';
 		$jumbotron_bg_img   = get_the_post_thumbnail_url( $post->ID, 'full' );
 		$jumbotron_title    = get_post_meta( get_the_ID(), 'jumbotron-title', true );
@@ -16,12 +18,15 @@
 			if ( has_post_thumbnail() ) {
 				echo '
 			<div id="jumbotron-cont" class="jumbotron jumbotron-fluid" style="background-image:url('. $jumbotron_bg_img .');">
-			  <div class="container">
-			    <h1 class="display-4">'. $jumbotron_title .'</h1>
-			    <p class="lead">'. $jumbotron_content .'</p>
+			  <div class="container">';
+				if($jumbotron_title !== $default) {
+				  echo '<h1 class="display-4">'. $jumbotron_title .'</h1>';
+				} else {
+				  echo '<h1 class="display-4">'. get_the_title($post_id) .'</h1>';
+				}
+				  echo  '<p class="lead">'. $jumbotron_content .'</p>
 			  </div>
-			</div>
-			';
+			</div>';
 			} else {
 				return $default;
 			}
