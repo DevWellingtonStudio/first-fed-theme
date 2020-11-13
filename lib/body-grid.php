@@ -10,6 +10,8 @@ function add_body_grid() {
 	$get_imageone_id = attachment_url_to_postid( $body_grid_img_one );
 	$alt1 = get_post_meta( $get_imageone_id, '_wp_attachment_image_alt', true );
 	$gridimg_one_title  = get_post_meta( get_the_ID(), 'gridimg-one-title', true );
+	$body_grid_link_one = get_post_meta(get_the_ID(), 'body-grid-link-one', true );
+	$body_grid_link_one_title = get_post_meta(get_the_ID(), 'body-grid-link-one-title', true );
 
 	$body_grid_img_two = get_post_meta( get_the_ID(), 'body-grid-img-two', true );
 	$get_imagetwo_id = attachment_url_to_postid( $body_grid_img_two );
@@ -28,6 +30,8 @@ function add_body_grid() {
 
 	$grid_content = get_post_meta( get_the_ID(), 'grid-content', true );
 
+
+
 	if(is_front_page() && !is_home() ) {
 		if ( $body_grid_img_one !== $default ) {
 			echo '
@@ -40,8 +44,10 @@ function add_body_grid() {
 							<div class="container">
 							<div class="row top-row justify-content-center">
 							<div class="col-md-5 feature">
+							<a href="'. $body_grid_link_one .'" title="'. $body_grid_link_one_title .'">
 							<img src="' . $body_grid_img_one . '" class="img-fluid" alt="' . $alt1 . '"/>
 							<h4>' . $gridimg_one_title . '</h4>
+							</a>
 							</div>
 							<div class="col-md-5 feature">
 							<img src="' . $body_grid_img_two . '" class="img-fluid" alt="' . $alt2 . '"/>

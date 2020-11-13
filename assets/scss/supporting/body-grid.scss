@@ -23,6 +23,10 @@
 		  }
 		  .row {
 			.feature {
+			  a {
+				color: $Black;
+				text-decoration: none;
+			  }
 			  h4 {
 				text-align: center;
 				margin-top: 0.6em;
