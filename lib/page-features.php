@@ -5,6 +5,7 @@
 
 	add_action('genesis_before_footer', 'add_page_features', 5);
 	function add_page_features() {
+
 		$default  = '';
 		$feat_img_one = get_post_meta(get_the_ID(), 'feat-img-one', true );
 		$get_imageone_id = attachment_url_to_postid( $feat_img_one );
@@ -26,7 +27,10 @@
 		$feat_cta_text_two  = get_post_meta(get_the_ID(), 'feat-cta-text-2', true );
 		$feat_cta_text_three  = get_post_meta(get_the_ID(), 'feat-cta-text-3', true );
 
-		if(is_page_template('templates/page-template.php')) {
+
+
+if(is_page_template('templates/page-template.php')) {
+
 			echo '
 			<div id="page-body-features" class="container-fluid">
 				<div class="top row">';
@@ -186,6 +190,3 @@
 							</div>';
 			}
 		}
-
-
-
