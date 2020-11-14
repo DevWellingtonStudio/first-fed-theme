@@ -1,5 +1,8 @@
 /** SCSS Page Related
 ============================== */
+h2.large-h2 {
+  font-size: 3vw;
+}
 #page-body-features {
   .top.row {
 	.feature:nth-child(1) {
@@ -10,13 +13,13 @@
 	  display: flex;
 	  flex-direction: column;
 	  justify-content: center;
-	  h2, h3, h4, p {
+	  h1,h2, h3, h4, p {
 		color: $White;
 		width: 75%;
+		margin: 0 auto;
 	  }
-	  h2 {
+	  h1,h2,h3,h4 {
 		margin-bottom: 1em;
-		font-size: 3vw;
 	  }
 	}
   }
@@ -127,7 +130,7 @@ ul#features-page-list  {
   background-color: $Gold;
 }
 
-/** Overrides **/
+/** Overrides The Page Basic Template **/
 .page-id-59 {
   .site-container {
 	#page-body-features {
@@ -138,9 +141,26 @@ ul#features-page-list  {
 			  color: $Green;
 			  width: 75%;
 			  max-width: 75%;
+			  margin: 0 auto;
 			}
 		  }
 		}
+	  .middle.row {
+		.feature:nth-child(1) {
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
+		  h1,h2,h3,h4,p {
+			color: $White;
+			width: 75%;
+			max-width: 75%;
+			margin: 0 auto;
+		  }
+		  h1,h2,h3,h4 {
+			margin-bottom: 1em;
+		  }
+		}
+	  }
 	}
   }
 }
