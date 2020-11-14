@@ -1,5 +1,10 @@
 /** SCSS Page Related
 ============================== */
+.feature-list {
+  display: flex;
+  justify-content: center;
+}
+
 h2.large-h2 {
   font-size: 3vw;
 }
@@ -14,6 +19,20 @@ ul#features-page-list {
 	}
   }
 }
+
+ul#company-page-list {
+  list-style: none;
+  li {
+	display: flex;
+	align-items: inherit;
+	margin: .7em auto;
+	.fas.fa-check-circle {
+	  color: $Green;
+	  margin-right: 10px;
+	}
+  }
+}
+
 #page-body-features {
   .top.row {
 	.feature:nth-child(1) {
@@ -45,12 +64,6 @@ ul#features-page-list {
 		font-size: 2vw;
 		margin-bottom: 1em;
 	  }
-	}
-  }
-  .cta-1 {
-	.card-body {
-	  display: flex;
-	  justify-content: center;
 	}
   }
   .middle.row {

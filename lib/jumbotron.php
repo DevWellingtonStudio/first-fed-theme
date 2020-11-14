@@ -15,34 +15,35 @@
 
 		if(is_page() && !is_front_page() && !is_home()) {
 
-			if ( has_post_thumbnail() ) {
-				echo '
-			<div id="jumbotron-cont" class="jumbotron jumbotron-fluid" style="background-image:url('. $jumbotron_bg_img .');">
+		  if ( has_post_thumbnail() ) {
+			echo '
+			<div id="jumbotron-cont" class="jumbotron jumbotron-fluid" style="background-image:url(' . $jumbotron_bg_img . ');">
 			  <div class="container">';
-				if($jumbotron_title !== $default) {
-				  echo '<h1 class="display-4">'. $jumbotron_title .'</h1>';
-				} else {
-				  echo '<h1 class="display-4">'. get_the_title($post_id) .'</h1>';
-				}
-				  echo  '<p class="lead">'. $jumbotron_content .'</p>
+			if ( $jumbotron_title !== $default ) {
+			  echo '<h1 class="display-4">' . $jumbotron_title . '</h1>';
+			} else {
+			  echo '<h1 class="display-4">' . get_the_title( $post_id ) . '</h1>';
+			}
+			echo '<p class="lead">' . $jumbotron_content . '</p>
 			  </div>
 			</div>';
-			} else {
-				return $default;
-			}
-		}
-		if ($page_featured_row !== $default ) {
+		  } else {
+			return $default;
+		  }
+
+		  if ( $page_featured_row !== $default ) {
 			echo '
 						<div id="page-feature" class="container-fluid page-feature-row">
 						  <div class="row">
 							  <div class="card">
 							  <div class="card-body">
-							  	'. $page_featured_row .'
+							  	' . $page_featured_row . '
 							  </div>
 						    </div>
 						  </div>
 					  </div>
 			  ';
+		  }
 		}
 	}
 
@@ -112,6 +113,6 @@
 			update_post_meta( $post_id, 'jumbotron-content', sanitize_text_field( $_POST['jumbotron-content'] ) );
 		}
 		if ( isset( $_POST['page-featured-row'] ) ) {
-			update_post_meta( $post_id, 'page-featured-row', sanitize_text_field( $_POST['page-featured-row'] ) );
+			update_post_meta( $post_id, 'page-featured-row', $_POST['page-featured-row'] );
 		}
 	}
