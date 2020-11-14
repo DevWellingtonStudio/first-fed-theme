@@ -18,7 +18,13 @@
   src: url('assets/fonts/Webfonts-Cocogoose/Web-Fonts/cocogoosepro_regular_macroman/cocogoosepro-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
+}
+@font-face {
+  font-family: 'cocogoosepro-light';
+  src: url('assets/fonts/Webfonts-Cocogoose/Web-Fonts/cocogoosepro_light_macroman/cocogoosepro-light-webfont.woff') format('woff');;
+  src: url('assets/fonts/Webfonts-Cocogoose/Web-Fonts/cocogoosepro_light_macroman/cocogoosepro-light-webfont.woff2') format('woff2');;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @import url("https://use.typekit.net/bjl0gma.css");

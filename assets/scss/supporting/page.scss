@@ -1,8 +1,5 @@
 /** SCSS Page Related
 ============================== */
-#page-body-features.container-fluid {
-
-}
 #page-body-features {
   .top.row {
 	.feature:nth-child(1) {
@@ -10,11 +7,43 @@
 	}
 	.feature:nth-child(2) {
 	  background-color: $Green;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  h2, h3, h4, p {
+		color: $White;
+		width: 75%;
+	  }
+	  h2 {
+		margin-bottom: 1em;
+		font-size: 3vw;
+	  }
+	}
+  }
+  .cta-1.card, .cta-2.card {
+	.card-body {
+	  padding: 2.618em 0;
+	  width: 70%;
+	  max-width: 70%;
+	  margin: 0 auto;
+	  h1,h2,h3,h4 {
+		text-align: center;
+		font-size: 2vw;
+		margin-bottom: 1em;
+	  }
 	}
   }
   .middle.row {
 	.feature:nth-child(1) {
 	  background-color: $Gold;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  h2, h3, h4, p {
+		color: $Black;
+		width: 75%;
+		margin: 0 auto;
+	  }
 	}
 	.feature:nth-child(2) {
 	  padding: 0;
@@ -26,6 +55,29 @@
 	}
 	.feature:nth-child(2) {
 	  background-color: $Green;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  h1,h2,h3,h4,p {
+		color: $White;
+		width: 75%;
+	  }
+	  h1,h2,h3,h4 {
+		margin-bottom: 1em;
+	  }
+	}
+  }
+  .cta-3.card {
+	padding: 2.618em;
+
+	.card-body {
+	  h1, h2, h3, h4, p {
+		color: $Green;
+		width: 70%;
+		max-width: 70%;
+		margin: 0 auto;
+		text-align: center;
+	  }
 	}
   }
   .card {
