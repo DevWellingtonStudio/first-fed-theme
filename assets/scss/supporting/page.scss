@@ -3,6 +3,17 @@
 h2.large-h2 {
   font-size: 3vw;
 }
+ul#features-page-list {
+  li {
+	font-size: 1.8vw;
+	display: flex;
+	align-items: center;
+	margin: .7em auto;
+	.fas {
+	  margin-right: 10px;
+	}
+  }
+}
 #page-body-features {
   .top.row {
 	.feature:nth-child(1) {
@@ -34,6 +45,12 @@ h2.large-h2 {
 		font-size: 2vw;
 		margin-bottom: 1em;
 	  }
+	}
+  }
+  .cta-1 {
+	.card-body {
+	  display: flex;
+	  justify-content: center;
 	}
   }
   .middle.row {
@@ -101,6 +118,23 @@ ul#features-page-list  {
   padding: 2.618em 1.618em;
   h2 {
 	text-align: center;
+	font-size: 5em;
+  }
+  .feature-page-row.row {
+	.feature:nth-child(1) {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  h1,h2,h3,h4,p {
+		width: 75%;
+		max-width: 75%;
+		margin: 0 auto;
+	  }
+	  h1,h2,h3,h4 {
+		margin-bottom: 1em !important;
+	  }
+	}
+
   }
 }
 #featured-content-section {
@@ -114,15 +148,45 @@ ul#features-page-list  {
 		width: 100%;
 	  }
 	}
+	.feature:nth-child(3) {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  h1,h2,h3,h4,p {
+		width: 75%;
+		max-width: 75%;
+		margin: 0 auto;
+	  }
+	  h1,h2,h3,h4 {
+		margin-bottom: 1em;
+		color: $Green;
+	  }
+	}
+  }
+  .footer-row-featurette.row {
+	.feature:nth-child(2) {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  h1,h2,h3,h4,p {
+		color: $White;
+		width: 75%;
+		max-width: 75%;
+		margin: 0 auto;
+	  }
+	  h1,h2,h3,h4 {
+		margin-bottom: 1em;
+	  }
+	}
   }
 }
 .image-text-overlay.row {
   position: relative;
   .card {
 	background-color: rgba(255,255,255, 0.5);
-	width: 40%;
+	width: 38%;
 	position: absolute;
-	bottom: 25%;
+	bottom: 38%;
 	left: 10%;
   }
 }
