@@ -18,29 +18,22 @@
 	add_action( 'genesis_loop', 'child_do_custom_loop' );
 
 	function child_do_custom_loop() {
+	  $default = '';
+	  $content = get_post()->post_content;
+	  if ( empty( $content ) ) {
+			return $default;
+	  } else {
 
-		$content = get_post()->post_content;
-if(empty($content)):?>
+		if ( have_posts() ) : while ( have_posts() ) : the_post();
 
- POST CONTENT IS EMPTY
+		  the_content();
 
-
-<?php else:?>
-
-
-     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-    <?php the_content(); ?>
-
-     <?php endwhile; else: endif; ?>
+		endwhile;
 
 
-<?php endif;
+		endif;
 
-
-
-
-
+	  }
 	}
 
 
