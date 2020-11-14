@@ -126,3 +126,21 @@ ul#features-page-list  {
 .footer-row-featurette {
   background-color: $Gold;
 }
+
+/** Overrides **/
+.page-id-59 {
+  .site-container {
+	#page-body-features {
+		.top.row {
+		  .feature:nth-child(2) {
+			background-color: $LightGrey !important;
+			h1,h2,h3,h4,p {
+			  color: $Green;
+			  width: 75%;
+			  max-width: 75%;
+			}
+		  }
+		}
+	}
+  }
+}
