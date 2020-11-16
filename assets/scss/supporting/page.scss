@@ -209,6 +209,21 @@ ul#features-page-list  {
 }
 
 /** Overrides The Page Basic Template **/
+.page-id-65 {
+  .site-container {
+	.site-empty-inner {
+	  padding: 0;
+	}
+	#page-body-features {
+	  padding-top: 5px;
+	  .row {
+		.feature:nth-child(1) {
+		  padding-right: 5px ;
+		}
+	  }
+	}
+  }
+}
 .page-id-59 {
   .site-container {
 	#page-body-features {
