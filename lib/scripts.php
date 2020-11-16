@@ -71,4 +71,18 @@ function bfg_custom_editor_css() {
 			)
 		);
 		wp_enqueue_script( 'meta-box-image' );
+
+
+
+		// Register Bootstrap JS and enqueue it
+		wp_register_script( 'app-bootstrap-js', BFG_THEME_JS . 'bootstrap.min.js', array( 'jquery' ), '', true );
+		wp_enqueue_script( 'app-bootstrap-js' );
+
+		wp_register_style('admin-bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', array(), '',  'all');
+		wp_enqueue_style('admin-bootstrap');
+
+
 	}
+
+
+
