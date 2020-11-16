@@ -163,7 +163,7 @@ if(is_page_template('templates/page-template.php')) {
 				}
 
 				if($image_text_overlay_img !== $default) {
-				echo '<div class="mt-x2 image-text-overlay row">
+				echo '<div id="image-overlay" class="mt-x2 image-text-overlay row">
 							<div class="container-fluid">
 							<img src="'. $image_text_overlay_img .'" alt="'. $img_text_overlay_alt .'">
 							<div class="card">
@@ -174,6 +174,8 @@ if(is_page_template('templates/page-template.php')) {
 							</div>
 							</div>';
 				}
+
+				
 
 				if($footer_row_featurette_img !== $default) {
 					echo '<div class="mt-x2 footer-row-featurette row">
