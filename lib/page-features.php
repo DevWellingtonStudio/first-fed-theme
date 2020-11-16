@@ -175,8 +175,6 @@ if(is_page_template('templates/page-template.php')) {
 							</div>';
 				}
 
-				
-
 				if($footer_row_featurette_img !== $default) {
 					echo '<div class="mt-x2 footer-row-featurette row">
 								<div class="col-md-6 feature">
