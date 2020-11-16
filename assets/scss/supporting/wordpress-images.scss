@@ -1,5 +1,6 @@
 img {
     @include img-fluid;
+  transition: 0.5s;
 }
 
 .alignleft,
