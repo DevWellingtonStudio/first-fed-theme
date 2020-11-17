@@ -107,10 +107,10 @@
 
 		// Checks for input and sanitizes/saves if needed
 		if ( isset( $_POST['jumbotron-title'] ) ) {
-			update_post_meta( $post_id, 'jumbotron-title', sanitize_text_field( $_POST['jumbotron-title'] ) );
+			update_post_meta( $post_id, 'jumbotron-title', $_POST['jumbotron-title'] );
 		}
 		if ( isset( $_POST['jumbotron-content'] ) ) {
-			update_post_meta( $post_id, 'jumbotron-content', sanitize_text_field( $_POST['jumbotron-content'] ) );
+			update_post_meta( $post_id, 'jumbotron-content', $_POST['jumbotron-content'] );
 		}
 		if ( isset( $_POST['page-featured-row'] ) ) {
 			update_post_meta( $post_id, 'page-featured-row', $_POST['page-featured-row'] );
