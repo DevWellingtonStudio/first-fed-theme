@@ -13,13 +13,33 @@ p {
   font-style: normal;
 }
 
-.lead-large {
+/*.lead-large {
   font-size: 1.2vw;
-}
+}*/
 
 .strong-green {
   font-weight: 700;
   color: $Green;
 }
+
+.lead-large {
+  font-size: calc(18px + (24 - 16)*(100vw - 400px)/(2800 - 300));
+}
+.lead-medium {
+  font-size: calc(16px + (24 - 16)*(100vw - 400px)/(2800 - 300));
+}
+.lead-small {
+  font-size: calc(14px + (24 - 14)*(100vw - 400px)/(2800 - 300));
+}
+.large-h2, .h-large {
+  font-size: calc(40px + (52 - 25)*(100vw - 300px)/(3800 - 300));
+}
+.h-medium {
+  font-size: calc(32px + (32 - 22)*(100vw - 300px)/(3800 - 300));
+}
+.h-small {
+  font-size: calc(28px + (28 - 20)*(100vw - 300px)/(3800 - 300));
+}
+
 
 

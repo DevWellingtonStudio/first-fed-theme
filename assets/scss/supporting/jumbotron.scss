@@ -65,6 +65,9 @@
 @media (max-width: 767.98px) {
   #jumbotron-cont {
 	.container {
+	  .wp-block-buttons {
+		text-align: center;
+	  }
 	  h1,p {
 		text-align: center;
 	  }

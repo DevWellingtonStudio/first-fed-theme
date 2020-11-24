@@ -36,10 +36,10 @@ if(is_page_template('templates/page-template.php')) {
 				<div class="top row">';
 
 				if ( $feat_img_one !== $default ) {
-				echo '<div class="col-md-6 feature">
+				echo '<div class="col-lg-6 feature">
 								<img src="' . $feat_img_one . '" alt="' . $alt1 . '">
 								</div>
-								<div class="col-md-6 feature" >
+								<div class="col-lg-6 feature" >
 					          ' . $feat_text_one . '
 								</div >';
 				}
@@ -57,10 +57,10 @@ if(is_page_template('templates/page-template.php')) {
 				echo '<div class="middle row">';
 
 				if ( $feat_img_two !== $default ) {
-				echo '<div class="col-md-6 feature">
+				echo '<div class="col-lg-6 feature">
 								' . $feat_text_two . '
 								</div>
-								<div class="col-md-6 feature">
+								<div class="col-lg-6 feature">
 									<img src="' . $feat_img_two . '" alt="' . $alt2 . '">
 								</div>';
 				}
@@ -77,13 +77,13 @@ if(is_page_template('templates/page-template.php')) {
 
 				if ( $feat_img_three !== $default ) {
 				echo '<div class="bottom row">
-							<div class="col-md-6 feature">
+							<div class="col-lg-6 feature">
 							<img src="' . $feat_img_three . '" alt="' . $alt3 . '">
 							</div>';
 				}
 
 				if ( $feat_text_three !== $default ) {
-				echo '<div class="col-md-6 feature">
+				echo '<div class="col-lg-6 feature">
 							' . $feat_text_three . '
 							</div>';
 				}
@@ -136,10 +136,10 @@ if(is_page_template('templates/page-template.php')) {
 				}
 
 				if ( $addtl_featette_img_one !== $default ) {
-				echo '<div class="col-md-6 feature">
+				echo '<div class="col-lg-6 feature">
 							<img class="img-fluid" src="' . $addtl_featette_img_one . '" alt="' . $featette_one_alt . '">
 							</div>
-							<div class="col-md-6 feature">
+							<div class="col-lg-6 feature">
 							' . $addtl_featette_text_one . '
 							</div>';
 				}
@@ -150,12 +150,12 @@ if(is_page_template('templates/page-template.php')) {
 							 <div class="feature-page-row row">';
 				}
 				if($addtl_featette_title_two !== $default ) {
-				echo  '<div class="col-md-6 feature">
+				echo  '<div class="col-lg-6 feature">
 						 	' . $addtl_featette_text_two . '
 						 	</div>';
 				}
 				if($addtl_featette_img_two !== $default ) {
-				echo '<div class="col-md-6 feature">
+				echo '<div class="col-lg-6 feature">
 							<img class="img-fluid" src="' . $addtl_featette_img_two . '" alt="' . $addtl_featette_img_two_alt . '">
 							</div>
 							</div>
@@ -177,10 +177,10 @@ if(is_page_template('templates/page-template.php')) {
 
 				if($footer_row_featurette_img !== $default) {
 					echo '<div class="mt-x2 footer-row-featurette row">
-								<div class="col-md-6 feature">
+								<div class="col-lg-6 feature">
 								<img class="img-fluid" src="'. $footer_row_featurette_img .'" alt="'. $footer_row_featurette_img_alt .'">
 								</div>
-								<div class="col-md-6 feature">
+								<div class="col-lg-6 feature">
 								'. $footer_row_text .'
 								</div>
 								</div>';

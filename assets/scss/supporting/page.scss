@@ -1,13 +1,15 @@
 /** SCSS Page Related
 ============================== */
+.products-list {
+  .card {
+	border: none;
+  }
+}
 .feature-list {
   display: flex;
   justify-content: center;
 }
 
-h2.large-h2 {
-  font-size: 3vw;
-}
 ul#features-page-list {
   li {
 	font-size: 1.8vw;
@@ -33,8 +35,46 @@ ul#company-page-list {
   }
 }
 
+.bottom.row {
+  .feature {
+	display: flex;
+	flex-basis: 100%;
+	height: 58vh;
+
+	img {
+	  object-fit: cover;
+	}
+  }
+}
+.middle.row {
+  .feature {
+	display: flex;
+	flex-basis: 100%;
+	height: 58vh;
+
+	img {
+	  object-fit: cover;
+	}
+  }
+}
+.top.row {
+  .feature {
+	display: flex;
+	flex-basis: 100%;
+	height: 58vh;
+	img {
+	  object-fit: cover;
+	}
+  }
+}
+
 #page-body-features {
   .top.row {
+	.feature {
+	  img {
+		width: 100%;
+	  }
+	}
 	.feature:nth-child(1) {
 	  padding: 0;
 	}
@@ -61,7 +101,6 @@ ul#company-page-list {
 	  margin: 0 auto;
 	  h1,h2,h3,h4 {
 		text-align: center;
-		font-size: 2vw;
 		margin-bottom: 1em;
 	  }
 	}
@@ -178,8 +217,14 @@ ul#features-page-list  {
 	}
   }
   .footer-row-featurette.row {
-	.feature:nth-child(2) {
+	.feature {
 	  display: flex;
+	  flex-basis: 100%;
+	  img {
+		object-fit: cover;
+	  }
+	}
+	.feature:nth-child(2) {
 	  flex-direction: column;
 	  justify-content: center;
 	  h1,h2,h3,h4,p {
@@ -194,7 +239,7 @@ ul#features-page-list  {
 	}
   }
 }
-.image-text-overlay.row {
+#image-overlay.image-text-overlay.row {
   position: relative;
   .card {
 	background-color: rgba(255,255,255, 0.5);
@@ -266,7 +311,14 @@ ul#features-page-list  {
 @media (min-width: 768px) {}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .footer-row-featurette.row {
+	.feature {
+	  transition: 0.5s;
+	  height: 70vh;
+	}
+  }
+}
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
@@ -278,14 +330,6 @@ ul#features-page-list  {
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-  #image-overlay {
-	.container-fluid {
-	  .card {
-		width: 80%;
-		left: 50%;
-	  }
-	}
-  }
   #page-body-features {
 	transition: 0.5s;
 	.row {
@@ -319,10 +363,36 @@ ul#features-page-list  {
 	}
   }
 
+  #page-body-features .cta-1.card .card-body, #page-body-features .cta-2.card .card-body {
+	width: 90%;
+	max-width: 100%;
+  }
+
 }
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {}
+@media (max-width: 991.98px) {
+  .footer-row-featurette.row {
+	.feature {
+	  transition: 0.5s;
+	  height: 59vh;
+	}
+  }
+
+}
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+  #image-overlay.image-text-overlay.row {
+	position: relative;
+	.card {
+	  background-color: rgba(255,255,255, 0.5);
+	  width: 80%;
+	  position: absolute;
+	  top: 10%;
+	  left: 5%;
+	  right: 5%;
+	  transform: translate( 5%, 0% );
+	}
+  }
+}
