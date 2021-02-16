@@ -13,8 +13,8 @@
 }
 
 .parallax-content {
-  position: relative;
-  top: 66%;
+  position: absolute;
+  top: 50%;
   left: 10%;
   h1 {
 	color: $White;
@@ -47,8 +47,7 @@
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
   .parallax-content {
-	position: relative;
-	top: 66%;
+	top: 50%;
 	left: auto;
 	h1 {
 	  color: $White;

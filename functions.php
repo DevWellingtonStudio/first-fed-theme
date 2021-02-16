@@ -103,3 +103,5 @@ function bfg_childtheme_setup() {
 add_action( 'after_setup_theme', function() {
 	require_once( CHILD_DIR . '/lib/modules/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php' );
 } );
+
+

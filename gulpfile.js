@@ -44,7 +44,7 @@ var paths = {
         dest: 'languages/frst-fed-theme.pot'
     },
     site: {
-        url: 'https://1stfed.local'
+        url: 'https://firstfed.local'
     }
 }
 

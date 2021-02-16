@@ -34,7 +34,10 @@ function add_body_grid() {
 	$body_grid_link_four = get_post_meta(get_the_ID(), 'body-grid-link-four', true );
 	$body_grid_link_four_title = get_post_meta(get_the_ID(), 'body-grid-link-four-title', true );
 
-	$grid_content = get_post_meta( get_the_ID(), 'grid-content', true );
+	$grid_content = (do_shortcode(get_post_meta( get_the_ID(), 'grid-content', true )));
+
+	//echo (do_shortcode(get_post_meta($post->ID, 'feat-cta-text-1', true)));
+	//echo (do_shortcode(get_post_meta($post->ID, 'feat-cta-text-2', true)));
 
 
 

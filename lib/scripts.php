@@ -21,11 +21,6 @@ function bfg_theme_scripts() {
 		wp_deregister_script( 'superfish' );
 		wp_deregister_script( 'superfish-args' );
 
-		// Deregister jQuery and use Bootstrap supplied version
-		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', BFG_THEME_JS . 'jquery.slim.min.js', array(), $version, true );
-		wp_enqueue_script( 'jquery' );
-
 		// Register Popper JS and enqueue it
 		wp_register_script( 'app-popper-js', BFG_THEME_JS . 'popper.min.js', array( 'jquery' ), $version, true );
 		wp_enqueue_script( 'app-popper-js' );
@@ -38,9 +33,14 @@ function bfg_theme_scripts() {
 		wp_register_script( 'app-js', BFG_THEME_JS . 'app.min.js', array( 'jquery' ), $version, true );
 		wp_enqueue_script( 'app-js' );
 
-		// Parallax JS
-		wp_register_script( 'parallax-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array( 'jquery' ), $version, true );
-		wp_enqueue_script( 'parallax-jquery' );
+
+		wp_register_script('font-awesome', 'https://kit.fontawesome.com/76342ff491.js', array(), true );
+		wp_enqueue_script('font-awesome');
+
+		// Deregister jQuery and use Bootstrap supplied version
+		wp_deregister_script( 'jquery' );
+		wp_register_script( 'jquery', BFG_THEME_JS . 'jquery.slim.min.js', array(), $version, true );
+		wp_enqueue_script( 'jquery' );
 
 		wp_register_script( 'parallax-min-js', BFG_THEME_JS . 'parallax.min.js', array(), $version, true );
 		wp_enqueue_script( 'parallax-min-js' );
@@ -48,8 +48,10 @@ function bfg_theme_scripts() {
 		wp_register_script( 'custom-js', BFG_THEME_JS . 'custom.js', array(), $version, true );
 		wp_enqueue_script( 'custom-js' );
 
-		wp_register_script('font-awesome', 'https://kit.fontawesome.com/76342ff491.js', array(), true );
-		wp_enqueue_script('font-awesome');
+		// Parallax JS
+		wp_register_script( 'parallax-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array( 'jquery' ), $version, true );
+		wp_enqueue_script( 'parallax-jquery' );
+
 	}
 }
 
