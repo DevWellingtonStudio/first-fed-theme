@@ -41,5 +41,13 @@ p {
   font-size: calc(28px + (28 - 20)*(100vw - 300px)/(3800 - 300));
 }
 
+@media (max-width: 575.98px) {
+  .h-large {
+	font-size: calc(25px + (52 - 25)*(100vw - 300px)/(3800 - 300));
+	transition: 0.5s;
+  }
+
+}
+
 
 

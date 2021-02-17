@@ -1,6 +1,17 @@
 /* SCSS Parallax
 ========================== */
 
+.parallax-slider:after {
+  content: "";
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
 
 .parallax-window {
   min-height: 700px;
@@ -17,6 +28,7 @@
   position: relative;
   top: 50%;
   left: 10%;
+  z-index: 4;
   h1 {
 	color: $White;
   }
