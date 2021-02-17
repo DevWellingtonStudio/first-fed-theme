@@ -2,13 +2,10 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteCond %{REQUEST_URI} ^/wp-content/uploads/[^\/]*/.*$
-RewriteRule ^(.*)$ https://1stfederalfinancial.com/$1 [QSA,L]
-
 # custom rules for loading server images or any other uploaded media files
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteCond %{HTTP_HOST} ^localhost$
-#RewriteRule ^.*/uploads/(.*)$ https://1stfederalfinancialservices.com/wp-content/uploads/$1 [L,R=301,NC]
+RewriteRule ^.*/uploads/(.*)$ https://1stfederalfinancialservices.com/wp-content/uploads/$1 [L,R=301,NC]
 </IfModule>
 
 # BEGIN WordPress

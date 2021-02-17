@@ -62,3 +62,19 @@ a.navbar-brand {
   transition: 0.5s;
   padding: 1.618em 5em 1.618em 5em;
 }
+
+@media (max-width: 575.98px) {
+  .navbar-brand {
+	max-width: 150px;
+  }
+}
+@media (max-width: 375.98px) {
+  .navbar-brand {
+	max-width: 138px;
+  }
+}
+@media (max-width: 320.98px) {
+  .navbar-brand {
+	max-width: 80px;
+  }
+}
