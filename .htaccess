@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/wp-content/uploads/[^\/]*/.*$
+RewriteRule ^(.*)$ https://1stfederalfinancial.com/$1 [QSA,L]
+
+# custom rules for loading server images or any other uploaded media files
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{HTTP_HOST} ^localhost$
+#RewriteRule ^.*/uploads/(.*)$ https://1stfederalfinancialservices.com/wp-content/uploads/$1 [L,R=301,NC]
+</IfModule>
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

@@ -3,7 +3,7 @@
  * Parallax Scroll Header - Front Page
  */
 
-add_action('genesis_after_header', 'add_parallax_frontpage_top', 5);
+add_action('genesis_header', 'add_parallax_frontpage_top', 5);
 function add_parallax_frontpage_top() {
 	global $post;
 	$default            = '';

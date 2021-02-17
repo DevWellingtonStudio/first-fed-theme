@@ -1,19 +1,20 @@
 /* SCSS Parallax
 ========================== */
 
+
 .parallax-window {
   min-height: 700px;
+  height: auto;
   background: transparent;
 }
 .parallax-mirror {
-  top: -160px !important;
   height: 100% !important;
   min-height: 1200px;
   z-index: 0 !important;
 }
 
 .parallax-content {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 10%;
   h1 {
@@ -31,7 +32,13 @@
 @media (min-width: 992px) {}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .parallax-slider {
+	img {
+	  margin-top: -100px;
+	}
+  }
+}
 
 
 
@@ -47,8 +54,10 @@
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
   .parallax-content {
+	position: absolute;
 	top: 50%;
-	left: auto;
+	left: 3%;
+	right: 3%;
 	h1 {
 	  color: $White;
 	  text-align: center;
@@ -57,6 +66,14 @@
 	  text-align: center;
 	}
   }
+
+  .parallax-slider {
+	img {
+	  height: 1000px;
+	  object-fit: cover;
+	}
+  }
+
 
 
 }
