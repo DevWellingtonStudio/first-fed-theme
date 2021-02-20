@@ -42,13 +42,24 @@
 }
 
 @media (pointer: coarse) and (hover: none) {
-  #full-width-video {
+ /* #full-width-video {
 	background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
+  }*/
   #full-width-video video {
+	/*display: none;*/
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  #full-width-video {
+	height: 40vh;
+	min-height: auto;
+	transition: 0.5s;
 	display: none;
   }
 }
+
 @media (max-width: 991.98px) {
   #full-width-video {
 	height: 34vh;
@@ -71,3 +82,5 @@
 	transition: 0.5s;
   }
 }
+
+
